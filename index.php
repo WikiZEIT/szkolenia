@@ -9,6 +9,21 @@ $a = rand(1, 10);
 $b = rand(1, 10);
 $result = $a + $b;
 
+$faq = [
+    [
+        'question' => 'Ile trwa edycja artykułu na Wikipedii?',
+        'answer'   => 'Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godziny. Krócej gdy mam już przygotowany tekst i źródła.',
+    ],
+    [
+        'question' => 'Czy edytujesz tylko w języku Polskim?',
+        'answer'   => 'Mogę pomóc także z edycją artykułów w języku Angielskim.',
+    ],
+    [
+        'question' => 'Czy możesz pomóc w dodaniu wpisu w Wikidata?',
+        'answer'   => 'Tak, zawsze dodaję wpis w Wikidata, gdy dodaję artykuł do Wikipedii. Mogę go także dodać, gdy twój temat nie nadaje się do Wikipedii.',
+    ],
+];
+
 session_start();
 $prev_result = isset($_SESSION['result']) ? $_SESSION['result'] : null;
 $_SESSION['result'] = $result;
@@ -1264,6 +1279,25 @@ a:hover {
 }
     </style>
     <link rel="canonical" href="https://jcubic.pl/wikipedia/" />
+    <script type="application/ld+json">
+    <?php
+    $faq_jsonld = [
+        '@context'   => 'https://schema.org',
+        '@type'      => 'FAQPage',
+        'mainEntity' => array_map(function($item) {
+            return [
+                '@type'          => 'Question',
+                'name'           => $item['question'],
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text'  => $item['answer'],
+                ],
+            ];
+        }, $faq),
+    ];
+    echo json_encode($faq_jsonld, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+    ?>
+    </script>
 </head>
 <body>
     <div class="design-root">
@@ -1521,27 +1555,15 @@ a:hover {
                         <section class="section">
                             <h2 class="section-title">FAQ</h2>
                             <div class="accordion">
+                                <?php foreach ($faq as $item): ?>
                                 <details class="accordion-item">
                                     <summary class="accordion-summary">
-                                        <h3 class="accordion-title">Ile trwa edycja artykułu na Wikipedii?</h3>
+                                        <h3 class="accordion-title"><?= htmlspecialchars($item['question']) ?></h3>
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
                                     </summary>
-                                    <p class="accordion-content">Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godzny. Krócej gdy mam już przygotowany tekst i źródła.</p>
+                                    <p class="accordion-content"><?= htmlspecialchars($item['answer']) ?></p>
                                 </details>
-                                <details class="accordion-item">
-                                    <summary class="accordion-summary">
-                                        <h3 class="accordion-title">Czy edytujesz tylko w języku Polskim?</h3>
-                                        <span class="material-symbols-outlined accordion-icon">expand_more</span>
-                                    </summary>
-                                    <p class="accordion-content">Mogę pomóc także z edycją artykułów w jęzuku Angielskim.</p>
-                                </details>
-                                <details class="accordion-item">
-                                    <summary class="accordion-summary">
-                                        <h3 class="accordion-title">Czy możesz pomóc w dodaniu wpisu w Wikidata?</h3>
-                                        <span class="material-symbols-outlined accordion-icon">expand_more</span>
-                                    </summary>
-                                    <p class="accordion-content">Tak, zawsze dodaje wpis w Wikidata, gdy dodaje artykuł do Wikipedii.</p>
-                                </details>
+                                <?php endforeach; ?>
                             </div>
                         </section>
 
