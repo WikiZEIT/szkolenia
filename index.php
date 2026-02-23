@@ -1249,31 +1249,45 @@ details[open] .accordion-icon {
                             <div class="accordion">
                                 <details class="accordion-item" open>
                                     <summary class="accordion-summary">
-                                        <h3 class="accordion-title">Zdatność artykułu i encyklopedyczność</h3>
+                                        <h3 class="accordion-title">Historia i zasady Wikipedii</h3>
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
                                     </summary>
-                                    <p class="accordion-content">Naucz się oceniać, czy temat spełnia rygorystyczne wytyczne Wikipedii dotyczące encyklopedyczności, co jest kluczowym pierwszym krokiem przed stworzeniem jakiejkolwiek treści.</p>
+                                    <p class="accordion-content">Wprowadzenie do historii Wikipedii, jej zasad działania i struktury społeczności. Dowiesz się, jak poruszać się po projekcie, gdzie szukać pomocy i jak rozumieć reguły rządzące encyklopedią.</p>
                                 </details>
                                 <details class="accordion-item">
                                     <summary class="accordion-summary">
-                                        <h3 class="accordion-title">Tworzenie treści do Wikipedii</h3>
+                                        <h3 class="accordion-title">Encyklopedyczność, czy temat nadaje się do Wikipedii</h3>
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
                                     </summary>
-                                    <p class="accordion-content">Opanuj sztukę pisania z neutralnego punktu widzenia (NPOV), właściwego podawania źródeł i formatowania, aby tworzyć artykuły, które przetrwają kontrolę społeczności.</p>
+                                    <p class="accordion-content">Nauczysz się oceniać, czy dany temat nadaje się do Wikipedii. Dzięki temu nie będziesz tracić czasu na tworzenie treści, które zostaną usunięte lub cofnięte przez społeczność.</p>
                                 </details>
                                 <details class="accordion-item">
                                     <summary class="accordion-summary">
-                                        <h3 class="accordion-title">Budowanie linków i SEO</h3>
+                                        <h3 class="accordion-title">Tworzenie poprawnego artykułu</h3>
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
                                     </summary>
-                                    <p class="accordion-content">Zrozum, jak etycznie budować wartościowe linki w Wikipedii i wykorzystywać jej autorytet dla SEO Twojej strony, włączając alternatywne strategie wykraczające poza bezpośrednie linki.</p>
+                                    <p class="accordion-content">Jak zbudować poprawnie artykuł od podstaw — struktura, neutralny punkt widzenia (NPOV), formatowanie i wikitext. Wszystko wyjaśnione krok po kroku podczas szkolenia.</p>
                                 </details>
                                 <details class="accordion-item">
                                     <summary class="accordion-summary">
-                                        <h3 class="accordion-title">Prawa autorskie i wykorzystanie obrazów</h3>
+                                        <h3 class="accordion-title">Źródła i przypisy</h3>
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
                                     </summary>
-                                    <p class="accordion-content">Poruszaj się po zawiłościach prawa autorskiego, dozwolonego użytku i Wikimedia Commons, aby poprawnie i legalnie dodawać obrazy do artykułów.</p>
+                                    <p class="accordion-content">Jak prawidłowo podawać źródła, dobierać wiarygodne referencje i dodawać przypisy. Poprawne źródłowanie to podstawa artykułu, który przetrwa kontrolę społeczności.</p>
+                                </details>
+                                <details class="accordion-item">
+                                    <summary class="accordion-summary">
+                                        <h3 class="accordion-title">Linki, budowanie i strategia SEO</h3>
+                                        <span class="material-symbols-outlined accordion-icon">expand_more</span>
+                                    </summary>
+                                    <p class="accordion-content">Jakie linki można dodawać i gdzie. Dowiesz się też, jak budować wartościowe linki nawet wtedy, gdy Twój temat nie nadaje się bezpośrednio do Wikipedii.</p>
+                                </details>
+                                <details class="accordion-item">
+                                    <summary class="accordion-summary">
+                                        <h3 class="accordion-title">Prawo autorskie i Wikimedia Commons</h3>
+                                        <span class="material-symbols-outlined accordion-icon">expand_more</span>
+                                    </summary>
+                                    <p class="accordion-content">Prawa autorskie w kontekście Wikipedii, licencje wolne oraz Wikimedia Commons — miejsce, gdzie przechowuje się zdjęcia i multimedia. Nauczysz się poprawnie dodawać obrazy zgodnie z zasadami projektu.</p>
                                 </details>
                             </div>
                         </section>
