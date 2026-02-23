@@ -1318,10 +1318,10 @@ a:not(.btn):hover {
                             <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
                         </button>
                         <!--
-                        <button class="btn btn-primary">
+                        <a class="btn btn-primary">
                             <span>Umów konsultację</span>
-                        </button>
-                         -->
+                        </a>
+                        -->
                     </header>
 
                     <main class="main-content">
@@ -1335,7 +1335,7 @@ a:not(.btn):hover {
                                         Specjalistyczne doradztwo i szkolenia, aby wykorzystać największą encyklopedię świata do zwiększenia widoczności Twojej marki. Masz problem z edycją? Twoja strona została skasowana? Chcesz wiedzieć dlaczego trafiłeś w dobre miejsce.
                                     </h2>
                                 </div>
-                                <a href="#kontakt" class="btn btn-primary btn-hero">
+                                <a href="#kontakt" class="btn btn-primary btn-hero" data-subject="Konsultacje z Wikipedii">
                                     <span>Umów się na konsultację</span>
                                 </a>
                             </div>
@@ -1444,7 +1444,7 @@ a:not(.btn):hover {
                                             <span>Tworzenie Artykułu od zera (płatna edycja)</span>
                                         </li>
                                     </ul>
-                                     <a href="#kontakt" class="btn btn-primary btn-full" data-title="Konsultacje z Wikipedii">
+                                     <a href="#kontakt" class="btn btn-primary btn-full" data-subject="Konsultacje z Wikipedii">
                                         <span>Umów konsultację</span>
                                     </a>
                                 </div>
@@ -1478,7 +1478,7 @@ a:not(.btn):hover {
                                             <span>Certyfikat ukończenia</span>
                                         </li>
                                     </ul>
-                                    <a href="#kontakt" class="btn btn-primary btn-full" data-title="Szkolenie Grupowe 'Wikipedia+SEO'">
+                                    <a href="#kontakt" class="btn btn-primary btn-full" data-subject="Szkolenie Grupowe 'Wikipedia+SEO'">
                                         <span>Rezerwuj</span>
                                     </a>
                                 </div>
@@ -1509,7 +1509,7 @@ a:not(.btn):hover {
                                             <span>Certyfikat ukończenia</span>
                                         </li>
                                     </ul>
-                                    <a href="#kontakt" class="btn btn-primary btn-full" data-title="Szkolenie indywidualne 'Wikipedia+SEO'">
+                                    <a href="#kontakt" class="btn btn-primary btn-full" data-subject="Szkolenie indywidualne 'Wikipedia+SEO'">
                                         <span>Rezerwuj</span>
                                     </a>
                                 </div>
@@ -1665,7 +1665,7 @@ a:not(.btn):hover {
             initTheme();
         })();
 
-        document.querySelectorAll('.btn[data-title]').forEach(function(btn) {
+        document.querySelectorAll('.btn[data-subject]').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var title = this.dataset.title;
                 document.getElementById('subject').value = title;
