@@ -584,6 +584,25 @@ html.dark .btn-theme-toggle:hover {
     color: var(--color-gray-100);
 }
 
+.section-source {
+    color: var(--color-gray-500);
+    font-size: 0.875rem;
+    margin: -0.5rem 0 0.5rem 1rem;
+}
+
+.dark .section-source {
+    color: var(--color-gray-400);
+}
+
+.section-source a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.section-source a:hover {
+    text-decoration: underline;
+}
+
 /* Services grid */
 .services-grid {
     display: grid;
@@ -1732,7 +1751,76 @@ a:not(.btn):hover {
                         </section>
 
                         <section class="section">
-                            <h2 class="section-title">O mnie</h2>
+                            <h2 class="section-title">Opinie o wsparciu Open Source</h2>
+                            <p class="section-source">Źródła: <a href="https://support.jcubic.pl/" target="_blank" rel="noopener">support.jcubic.pl</a> oraz <a href="https://www.linkedin.com/in/jcubic/" target="_blank" rel="noopener">LinkedIn</a></p>
+                            <div class="testimonials-grid">
+                                <div class="testimonial-card">
+                                    <span class="material-symbols-outlined testimonial-quote">format_quote</span>
+                                    <blockquote class="testimonial-text">"I came across Jakub's website when we were trying to solve a problem with rendering of terminal outputs. I&nbsp;contacted him for help. He immediately responded and started helping us. He knows Javascript very well and has in-depth knowledge of implementing terminals in JavaScript. He went above and beyond and quickly put together a&nbsp;code that we could use for our purpose. Wherever he could not help, he pointed us in the right direction. This was a small project but a&nbsp;great experience dealing with Jakub from Poland! Thank you Jakub."</blockquote>
+                                    <footer class="testimonial-footer">
+                                        <p class="testimonial-name">Sarang Dharmapurikar</p>
+                                        <p class="testimonial-position">CEO, <a href="https://www.dagknows.com/" target="_blank" rel="noopener">DagKnows Inc</a></p>
+                                    </footer>
+                                </div>
+                                <div class="testimonial-card">
+                                    <span class="material-symbols-outlined testimonial-quote">format_quote</span>
+                                    <blockquote class="testimonial-text">"Jakub is an expert in his field. I hired him to help with my project and he made a solution. He is pleasant to deal with and his time is well worth the price. Thanks Jakub."</blockquote>
+                                    <footer class="testimonial-footer">
+                                        <p class="testimonial-name">Ordo</p>
+                                        <p class="testimonial-position">Klient, <a href="https://support.jcubic.pl/" target="_blank" rel="noopener">support.jcubic.pl</a></p>
+                                    </footer>
+                                </div>
+                                <div class="testimonial-card">
+                                    <span class="material-symbols-outlined testimonial-quote">format_quote</span>
+                                    <blockquote class="testimonial-text">"Jakub T. Jankiewicz shared his open source story for the book maintaine.rs, showcasing a diverse portfolio of projects driven by creativity and technical skill. From jQuery Terminal to isomorphic-git—a pure JavaScript Git client—Jakub's dedication as a maintainer continues to empower developers worldwide. Grateful for his contribution to the book and for his ongoing impact in open source."</blockquote>
+                                    <footer class="testimonial-footer">
+                                        <p class="testimonial-name">Nick Vidal</p>
+                                        <p class="testimonial-position">Open Source enthusiast, <a href="https://www.linkedin.com/in/nickvidal/" target="_blank" rel="noopener">LinkedIn</a></p>
+                                    </footer>
+                                </div>
+                                <div class="testimonial-card">
+                                    <span class="material-symbols-outlined testimonial-quote">format_quote</span>
+                                    <blockquote class="testimonial-text">"I have worked with Kuba on a large scientific software project. Not only did he become known as an absolute expert in JavaScript and its frameworks, but he also quickly learned enough R and Shiny to be able to actively participate in the development of the server-side parts of the app. Kuba is passionate in what he's doing, hungry for knowledge and always eager to share what he has already learned."</blockquote>
+                                    <footer class="testimonial-footer">
+                                        <p class="testimonial-name">Paweł Piątkowski</p>
+                                        <p class="testimonial-position">Born-again bioinformatician, <a href="https://www.linkedin.com/in/pawel-piatkowski/" target="_blank" rel="noopener">LinkedIn</a></p>
+                                    </footer>
+                                </div>
+                                <div class="testimonial-card">
+                                    <span class="material-symbols-outlined testimonial-quote">format_quote</span>
+                                    <blockquote class="testimonial-text">"I can highly recommend Jakub as a programmer and frontend expert. He has been an invaluable asset to our team, creating an open source project for terminal emulation in browser. Jakub is an excellent communicator who is always willing to offer advice and assistance. He provides long term support and is great at troubleshooting. His skills are top-notch and I highly recommend him."</blockquote>
+                                    <footer class="testimonial-footer">
+                                        <p class="testimonial-name">Tom Sapletta</p>
+                                        <p class="testimonial-position">prototyping.pl, <a href="https://www.linkedin.com/in/tom-sapletta-com/en/" target="_blank" rel="noopener">LinkedIn</a></p>
+                                    </footer>
+                                </div>
+                                <div class="testimonial-card">
+                                    <span class="material-symbols-outlined testimonial-quote">format_quote</span>
+                                    <blockquote class="testimonial-text">"Jakub is a JavaScript expert. His knowledge is really stunning. Jakub has always a thousand ideas how to solve problems and he doesn't refrain to communicate them openly. Beside the impressive technical skills Jakub is a very helpful person. One may learn a lot from Jakub."</blockquote>
+                                    <footer class="testimonial-footer">
+                                        <p class="testimonial-name">Jakub Małecki</p>
+                                        <p class="testimonial-position">Senior Data Scientist, <a href="https://www.linkedin.com/in/malecki-jakub/en/" target="_blank" rel="noopener">LinkedIn</a></p>
+                                    </footer>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2 class="section-title">FAQ</h2>
+                            <div class="accordion">
+                                <?php foreach ($faq as $item): ?>
+                                <details class="accordion-item">
+                                    <summary class="accordion-summary">
+                                        <h3 class="accordion-title"><?= htmlspecialchars($item['question']) ?></h3>
+                                        <span class="material-symbols-outlined accordion-icon">expand_more</span>
+                                    </summary>
+                                    <p class="accordion-content"><?= htmlspecialchars($item['answer']) ?></p>
+                                </details>
+                                <?php endforeach; ?>
+                            </div>
+                        </section>
+
+                        <section class="section">
                             <div class="about-card">
                                 <div class="about-avatar">
                                     <img src="./avatar-sm.jpg" alt="Jakub T. Jankiewicz portrait"/>
@@ -1751,21 +1839,6 @@ a:not(.btn):hover {
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                        </section>
-
-                        <section class="section">
-                            <h2 class="section-title">FAQ</h2>
-                            <div class="accordion">
-                                <?php foreach ($faq as $item): ?>
-                                <details class="accordion-item">
-                                    <summary class="accordion-summary">
-                                        <h3 class="accordion-title"><?= htmlspecialchars($item['question']) ?></h3>
-                                        <span class="material-symbols-outlined accordion-icon">expand_more</span>
-                                    </summary>
-                                    <p class="accordion-content"><?= htmlspecialchars($item['answer']) ?></p>
-                                </details>
-                                <?php endforeach; ?>
                             </div>
                         </section>
 
