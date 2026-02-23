@@ -1433,7 +1433,7 @@ details[open] .accordion-icon {
                             <div class="accordion">
                                 <details class="accordion-item">
                                     <summary class="accordion-summary">
-                                        <h3 class="accordion-title">Ile trwa edycja artykułu?</h3>
+                                        <h3 class="accordion-title">Ile trwa edycja artykułu na Wikipedii?</h3>
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
                                     </summary>
                                     <p class="accordion-content">Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godzny. Krócej gdy mam już przygotowany tekst i źródła.</p>
