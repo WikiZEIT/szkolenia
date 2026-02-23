@@ -739,25 +739,26 @@ details[open] .accordion-icon {
     margin: 1.5rem 0;
 }
 
-.price {
+.pricing-name {
     font-size: 2.25rem;
     font-weight: 900;
     color: var(--color-gray-900);
     margin: 0;
 }
 
-.dark .price {
+.dark .pricing-name {
     color: var(--color-gray-100);
 }
 
-.price-period {
-    font-size: 0.875rem;
-    color: var(--color-gray-500);
-    margin: 0;
+.pricing-price {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    margin: 0.25rem 0 0;
 }
 
-.dark .price-period {
-    color: var(--color-gray-400);
+.dark .pricing-price {
+    color: var(--color-primary);
 }
 
 .pricing-features {
@@ -1284,8 +1285,8 @@ details[open] .accordion-icon {
                                     <h3 class="pricing-title">Konsultacje Wikipedia SEO/Marketing</h3>
                                     <p class="pricing-description">Indywidualne sesje strategiczne, aby rozwiązać Twoje konkretne wyzwania związane z Wikipedią.</p>
                                     <div class="pricing-amount">
-                                        <p class="price">250 PLN</p>
-                                        <p class="price-period">za godzinę</p>
+                                        <p class="pricing-name">Konsultacje</p>
+                                        <p class="pricing-price">250zł/godz.</p>
                                     </div>
                                     <ul class="pricing-features">
                                         <li class="pricing-feature">
@@ -1305,7 +1306,7 @@ details[open] .accordion-icon {
                                             <span>Tworzenie Artykułu od zera (płatna edycja)</span>
                                         </li>
                                     </ul>
-                                    <a href="#kontakt" class="btn btn-primary btn-full">
+                                     <a href="#kontakt" class="btn btn-primary btn-full" data-title="Konsultacje z Wikipedii">
                                         <span>Umów konsultację</span>
                                     </a>
                                 </div>
@@ -1318,8 +1319,8 @@ details[open] .accordion-icon {
                                     </div>
                                     <p class="pricing-description">Kompleksowy kurs dla zespołów i indywidualistów, aby samodzielnie zarządzać obecnością w Wikipedii.</p>
                                     <div class="pricing-amount">
-                                        <p class="price">Szkolenie Grupowe</p>
-                                        <p class="price-period">2999 zł (599/os)</p>
+                                        <p class="pricing-name">Szkolenie Grupowe</p>
+                                        <p class="pricing-price">2999 zł (599zł/os.)</p>
                                     </div>
                                     <ul class="pricing-features">
                                         <li class="pricing-feature">
@@ -1339,7 +1340,7 @@ details[open] .accordion-icon {
                                             <span>Certyfikat ukończenia</span>
                                         </li>
                                     </ul>
-                                    <a href="#kontakt" class="btn btn-primary btn-full">
+                                    <a href="#kontakt" class="btn btn-primary btn-full" data-title="Szkolenie Grupowe 'Wikipedia+SEO'">
                                         <span>Rezerwój</span>
                                     </a>
                                 </div>
@@ -1349,8 +1350,8 @@ details[open] .accordion-icon {
                                     </div>
                                     <p class="pricing-description">Kompleksowy kurs dla jednej osoby, aby samodzielnie zarządzać obecnością w Wikipedii.</p>
                                     <div class="pricing-amount">
-                                        <p class="price">Szkolenie</p>
-                                        <p class="price-period">999 zł</p>
+                                        <p class="pricing-name">Szkolenie</p>
+                                        <p class="pricing-price">999 zł</p>
                                     </div>
                                     <ul class="pricing-features">
                                         <li class="pricing-feature">
@@ -1370,7 +1371,7 @@ details[open] .accordion-icon {
                                             <span>Certyfikat ukończenia</span>
                                         </li>
                                     </ul>
-                                    <a href="#kontakt" class="btn btn-primary btn-full">
+                                    <a href="#kontakt" class="btn btn-primary btn-full" data-title="Szkolenie 'Wikipedia+SEO'">
                                         <span>Rezerwój</span>
                                     </a>
                                 </div>
@@ -1490,6 +1491,14 @@ details[open] .accordion-icon {
         </div>
     </div>
     <script defer src="https://umami.jcubic.pl/script.js" data-website-id="74ae63b5-5715-4e73-89b8-3ecd1302c648"></script>
+    <script>
+        document.querySelectorAll('.btn[data-title]').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var title = this.dataset.title;
+                document.getElementById('subject').value = title;
+            });
+        });
+    </script>
 </body>
 </html>
 <?php } ?>
