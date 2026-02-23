@@ -286,10 +286,17 @@ if (isset($_GET['auth'])) {
     }
 } else {
 ?><!DOCTYPE html>
-<html class="light" lang="pl">
+<html lang="pl">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script>
+        (function() {
+            var stored = localStorage.getItem('wikipedia:colorScheme');
+            var dark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            document.documentElement.classList.add(dark ? 'dark' : 'light');
+        })();
+    </script>
     <title>Wikipedia Konsultacje i Szkolenia</title>
     <link rel="canonical" href="https://support.jcubic.pl/wikipedia/" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
@@ -339,7 +346,7 @@ body {
     line-height: 1.5;
 }
 
-.dark body {
+html.dark body {
     background-color: var(--color-background-dark);
     color: var(--color-gray-100);
 }
@@ -372,6 +379,37 @@ body {
     width: 100%;
     max-width: 90rem;
     flex: 1;
+}
+
+/* Theme toggle button */
+.btn-theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--border-radius-full);
+    border: 1px solid var(--color-gray-200);
+    background-color: transparent;
+    color: var(--color-gray-600);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    flex-shrink: 0;
+}
+
+.btn-theme-toggle:hover {
+    background-color: var(--color-gray-100);
+    color: var(--color-gray-900);
+}
+
+html.dark .btn-theme-toggle {
+    border-color: var(--color-gray-700);
+    color: var(--color-gray-400);
+}
+
+html.dark .btn-theme-toggle:hover {
+    background-color: var(--color-gray-800);
+    color: var(--color-gray-100);
 }
 
 /* Header */
@@ -1135,8 +1173,24 @@ details[open] .accordion-icon {
     margin: 0;
 }
 
-.dark .footer-copyright {
+a {
+    color: var(--color-gray-600);
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+.dark {
     color: var(--color-gray-400);
+}
+
+.dark a {
+    color: var(--color-gray-400);
+}
+
+.dark a:hover {
+    color: var(--color-primary);
 }
 
 .footer-links {
@@ -1226,6 +1280,9 @@ details[open] .accordion-icon {
                             </div>
                             <h2 class="header-title">Wikipedia SEO</h2>
                         </div>
+                        <button class="btn-theme-toggle" id="theme-toggle" aria-label="Przełącz tryb ciemny/jasny">
+                            <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+                        </button>
                         <!--
                         <button class="btn btn-primary">
                             <span>Umów konsultację</span>
@@ -1544,6 +1601,48 @@ details[open] .accordion-icon {
     </div>
     <script defer src="https://umami.jcubic.pl/script.js" data-website-id="74ae63b5-5715-4e73-89b8-3ecd1302c648"></script>
     <script>
+        (function() {
+            var STORAGE_KEY = 'wikipedia:colorScheme';
+            var html = document.documentElement;
+            var icon = document.getElementById('theme-icon');
+
+            function isDark() {
+                return html.classList.contains('dark');
+            }
+
+            function applyTheme(dark) {
+                if (dark) {
+                    html.classList.add('dark');
+                    html.classList.remove('light');
+                    icon.textContent = 'light_mode';
+                } else {
+                    html.classList.remove('dark');
+                    html.classList.add('light');
+                    icon.textContent = 'dark_mode';
+                }
+            }
+
+            function initTheme() {
+                var stored = localStorage.getItem(STORAGE_KEY);
+                if (stored === 'dark') {
+                    applyTheme(true);
+                } else if (stored === 'light') {
+                    applyTheme(false);
+                } else {
+                    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    applyTheme(prefersDark);
+                }
+            }
+
+            document.getElementById('theme-toggle').addEventListener('click', function() {
+                var dark = !isDark();
+                applyTheme(dark);
+                localStorage.setItem(STORAGE_KEY, dark ? 'dark' : 'light');
+            });
+
+            initTheme();
+        })();
+
         document.querySelectorAll('.btn[data-title]').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 var title = this.dataset.title;
