@@ -1469,6 +1469,11 @@ a:not(.btn):hover {
     </script>
 </head>
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="icon-linkedin" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </symbol>
+    </svg>
     <div class="design-root">
         <div class="layout-container">
             <div class="layout-wrapper">
@@ -1799,7 +1804,7 @@ a:not(.btn):hover {
                                     <blockquote class="testimonial-text">"Jakub T. Jankiewicz shared his open source story for the book maintaine.rs, showcasing a diverse portfolio of projects driven by creativity and technical skill. From jQuery Terminal to isomorphic-git—a pure JavaScript Git client—Jakub's dedication as a maintainer continues to empower developers worldwide. Grateful for his contribution to the book and for his ongoing impact in open source."</blockquote>
                                     <footer class="testimonial-footer">
                                         <p class="testimonial-name">Nick Vidal</p>
-                                        <p class="testimonial-position">Open Source enthusiast, <a href="https://www.linkedin.com/in/nickvidal/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></p>
+                                        <p class="testimonial-position">Open Source enthusiast, <a href="https://www.linkedin.com/in/nickvidal/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></p>
                                     </footer>
                                 </div>
                                 <div class="testimonial-card">
@@ -1807,7 +1812,7 @@ a:not(.btn):hover {
                                     <blockquote class="testimonial-text">"I have worked with Kuba on a large scientific software project. Not only did he become known as an absolute expert in JavaScript and its frameworks, but he also quickly learned enough R and Shiny to be able to actively participate in the development of the server-side parts of the app. Kuba is passionate in what he's doing, hungry for knowledge and always eager to share what he has already learned."</blockquote>
                                     <footer class="testimonial-footer">
                                         <p class="testimonial-name">Paweł Piątkowski</p>
-                                        <p class="testimonial-position">Born-again bioinformatician, <a href="https://www.linkedin.com/in/pawel-piatkowski/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></p>
+                                        <p class="testimonial-position">Born-again bioinformatician, <a href="https://www.linkedin.com/in/pawel-piatkowski/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></p>
                                     </footer>
                                 </div>
                                 <div class="testimonial-card">
@@ -1815,7 +1820,7 @@ a:not(.btn):hover {
                                     <blockquote class="testimonial-text">"I can highly recommend Jakub as a programmer and frontend expert. He has been an invaluable asset to our team, creating an open source project for terminal emulation in browser. Jakub is an excellent communicator who is always willing to offer advice and assistance. He provides long term support and is great at troubleshooting. His skills are top-notch and I highly recommend him."</blockquote>
                                     <footer class="testimonial-footer">
                                         <p class="testimonial-name">Tom Sapletta</p>
-                                        <p class="testimonial-position">prototyping.pl, <a href="https://www.linkedin.com/in/tom-sapletta-com/en/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></p>
+                                        <p class="testimonial-position">prototyping.pl, <a href="https://www.linkedin.com/in/tom-sapletta-com/en/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></p>
                                     </footer>
                                 </div>
                                 <div class="testimonial-card">
@@ -1823,7 +1828,7 @@ a:not(.btn):hover {
                                     <blockquote class="testimonial-text">"Jakub is a JavaScript expert. His knowledge is really stunning. Jakub has always a thousand ideas how to solve problems and he doesn't refrain to communicate them openly. Beside the impressive technical skills Jakub is a very helpful person. One may learn a lot from Jakub."</blockquote>
                                     <footer class="testimonial-footer">
                                         <p class="testimonial-name">Jakub Małecki</p>
-                                        <p class="testimonial-position">Senior Data Scientist, <a href="https://www.linkedin.com/in/malecki-jakub/en/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></p>
+                                        <p class="testimonial-position">Senior Data Scientist, <a href="https://www.linkedin.com/in/malecki-jakub/en/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></p>
                                     </footer>
                                 </div>
                             </div>
