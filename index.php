@@ -1082,6 +1082,33 @@ details[open] .accordion-icon {
     color: var(--color-gray-300);
 }
 
+.about-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.about-list-item {
+    padding-left: 1.25rem;
+    border-left: 3px solid var(--color-primary);
+    color: var(--color-gray-700);
+    line-height: 1.6;
+    font-size: 0.9375rem;
+}
+
+.dark .about-list-item {
+    color: var(--color-gray-300);
+}
+
 /* Contact section */
 .contact-section {
     padding: 2rem;
@@ -1710,7 +1737,20 @@ a:not(.btn):hover {
                                 <div class="about-avatar">
                                     <img src="./avatar-sm.jpg" alt="Jakub T. Jankiewicz portrait"/>
                                 </div>
-                                <p class="about-text">Nazywam się <a href="https://jakub.jankiewicz.org/">Jakub T. Jankiewicz</a>. Jestem Redaktorem w Polskiej Wikipedii, gdzie jestem także WikiTrenerem (prowadzę szkolenia na temat Wikipedii dla <a href="https://wikimedia.pl/">Wikimedia Polska</a>) oraz WikiPrzewodnikiem dla początkujących.</p>
+                                <div class="about-body">
+                                    <p class="about-text">Nazywam się <a href="https://jakub.jankiewicz.org/"><strong>Jakub T. Jankiewicz</strong></a>. Łączę świat technologii z rzetelną informacją, działając na styku programowania i wolnej wiedzy.</p>
+                                    <ul class="about-list">
+                                        <li class="about-list-item">
+                                            <strong>W Wikipedii:</strong> Posiadam uprawnienia <strong>Redaktora</strong> w polskiej edycji. Jako certyfikowany <strong>WikiTrener</strong> prowadzę oficjalne szkolenia dla stowarzyszenia <a href="https://wikimedia.pl/">Wikimedia Polska</a>, a jako <strong>WikiPrzewodnik</strong> pomagam nowicjuszom stawiać pierwsze kroki.
+                                        </li>
+                                        <li class="about-list-item">
+                                            <strong>W Technologii:</strong> Jestem doświadczonym programistą i twórcą projektów Open Source (m.in. <a href="https://terminal.jcubic.pl">jQuery Terminal</a>). Moje techniczne podejście pozwala mi rozumieć Wikipedię nie tylko jako tekst, ale jako system danych strukturalnych (Wikidata), który bezpośrednio wpływa na nowoczesne SEO i Graf Wiedzy Google.
+                                        </li>
+                                        <li class="about-list-item">
+                                            <strong>W Edukacji:</strong> Od lat tłumaczę zawiłe aspekty techniczne w sposób przystępny dla biznesu. Moim celem jest edukowanie profesjonalistów z branży PR i SEO, aby ich obecność w największej encyklopedii świata była etyczna, trwała i technicznie poprawna.
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </section>
 
