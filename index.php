@@ -1413,6 +1413,33 @@ details[open] .accordion-icon {
                             </div>
                         </section>
 
+                        <section class="section">
+                            <h2 class="section-title">FAQ</h2>
+                            <div class="accordion">
+                                <details class="accordion-item">
+                                    <summary class="accordion-summary">
+                                        <h3 class="accordion-title">Ile traw edycja artykułu?</h3>
+                                        <span class="material-symbols-outlined accordion-icon">expand_more</span>
+                                    </summary>
+                                    <p class="accordion-content">Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godzny. Krócej gdy mam już przygotowany tekst i źródła.</p>
+                                </details>
+                                <details class="accordion-item">
+                                    <summary class="accordion-summary">
+                                        <h3 class="accordion-title">Czy edytujesz tylko w języku Polskim?</h3>
+                                        <span class="material-symbols-outlined accordion-icon">expand_more</span>
+                                    </summary>
+                                    <p class="accordion-content">Mogę pomóc z edycją także artykułów w jęzuku Angielskim.</p>
+                                </details>
+                                <details class="accordion-item">
+                                    <summary class="accordion-summary">
+                                        <h3 class="accordion-title">Czy możesz pomóc w dodaniu wpisu w Wikidata?</h3>
+                                        <span class="material-symbols-outlined accordion-icon">expand_more</span>
+                                    </summary>
+                                    <p class="accordion-content">Tak, zawsze dodaje wpis w Wikidata, gdy dodaje artykuł do Wikipedii.</p>
+                                </details>
+                            </div>
+                        </section>
+
                         <section class="section contact-section" id="kontakt">
                             <div class="contact-header">
                                 <h2 class="contact-title">Kontakt</h2>
