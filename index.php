@@ -249,7 +249,6 @@ if (isset($_GET['auth'])) {
         .code { font-size: 48px; font-weight: bold; background: #f8f8f8; padding: 20px; display: inline-block; margin: 30px; border: 2px dashed #ccc; }
         a { font-size: 24px; color: #0066cc; }
     </style>
-    <link rel="canonical" href="https://jcubic.pl/wikipedia/" />
 </head>
 <body>
     <h1>Potwierdź dostęp w Allegro</h1>";
@@ -1176,6 +1175,7 @@ details[open] .accordion-icon {
     }
 }
     </style>
+    <link rel="canonical" href="https://jcubic.pl/wikipedia/" />
 </head>
 <body>
     <div class="design-root">
