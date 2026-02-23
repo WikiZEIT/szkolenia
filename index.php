@@ -1355,7 +1355,7 @@ details[open] .accordion-icon {
                                         </li>
                                     </ul>
                                     <a href="#kontakt" class="btn btn-primary btn-full" data-title="Szkolenie Grupowe 'Wikipedia+SEO'">
-                                        <span>Rezerwój</span>
+                                        <span>Rezerwuj</span>
                                     </a>
                                 </div>
                                 <div class="pricing-card pricing-card-featured">
@@ -1386,7 +1386,7 @@ details[open] .accordion-icon {
                                         </li>
                                     </ul>
                                     <a href="#kontakt" class="btn btn-primary btn-full" data-title="Szkolenie 'Wikipedia+SEO'">
-                                        <span>Rezerwój</span>
+                                        <span>Rezerwuj</span>
                                     </a>
                                 </div>
                             </div>
