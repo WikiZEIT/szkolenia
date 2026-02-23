@@ -1188,11 +1188,11 @@ details[open] .accordion-icon {
     margin: 0;
 }
 
-a {
+a:not(.btn) {
     color: var(--color-gray-600);
 }
 
-a:hover {
+a:not(.btn):hover {
     color: var(--color-primary);
 }
 
@@ -1200,11 +1200,11 @@ a:hover {
     color: var(--color-gray-400);
 }
 
-.dark a {
+.dark a:not(.btn) {
     color: var(--color-gray-400);
 }
 
-.dark a:hover {
+.dark a:not(.btn):hover {
     color: var(--color-primary);
 }
 
