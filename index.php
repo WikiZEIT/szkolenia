@@ -713,6 +713,105 @@ details[open] .accordion-icon {
     color: var(--color-gray-400);
 }
 
+/* Audience list */
+.audience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.audience-item {
+    padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+    border-left: 4px solid var(--color-primary);
+    border-radius: 0 var(--border-radius-xl) var(--border-radius-xl) 0;
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-gray-200);
+    border-right: 1px solid var(--color-gray-200);
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.dark .audience-item {
+    background-color: var(--color-background-dark);
+    border-top-color: var(--color-gray-800);
+    border-right-color: var(--color-gray-800);
+    border-bottom-color: var(--color-gray-800);
+}
+
+.audience-title {
+    color: var(--color-gray-900);
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin: 0 0 0.5rem;
+}
+
+.dark .audience-title {
+    color: var(--color-gray-100);
+}
+
+.audience-desc {
+    color: var(--color-gray-600);
+    font-size: 0.9375rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.dark .audience-desc {
+    color: var(--color-gray-400);
+}
+
+/* Bonuses */
+.bonuses {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bonus-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-xl);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+}
+
+.dark .bonus-item {
+    background-color: var(--color-background-dark);
+    border-color: var(--color-gray-800);
+}
+
+.bonus-icon {
+    font-size: 2rem;
+    color: var(--color-primary);
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.bonus-title {
+    color: var(--color-gray-900);
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin: 0 0 0.5rem;
+}
+
+.dark .bonus-title {
+    color: var(--color-gray-100);
+}
+
+.bonus-desc {
+    color: var(--color-gray-600);
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+.dark .bonus-desc {
+    color: var(--color-gray-400);
+}
+
 /* Pricing grid */
 .pricing-grid {
     display: grid;
@@ -1332,7 +1431,7 @@ a:not(.btn):hover {
                                       Płatna Edycja Wikipedii. Szkolenia oraz Konsultacje.
                                     </h1>
                                     <h2 class="hero-subtitle">
-                                        Specjalistyczne doradztwo i szkolenia, aby wykorzystać największą encyklopedię świata do zwiększenia widoczności Twojej marki. Masz problem z edycją? Twoja strona została skasowana? Chcesz wiedzieć dlaczego trafiłeś w dobre miejsce.
+                                        Pomagam firmom zrozumieć standardy Wikipedii, aby ich obecność tam była trwała i zgodna z zasadami społeczności. Masz problem z edycją? Twoja strona została skasowana? Chcesz wiedzieć dlaczego, trafiłeś w dobre miejsce.
                                     </h2>
                                 </div>
                                 <a href="#kontakt" class="btn btn-primary btn-hero" data-subject="Konsultacje z Wikipedii">
@@ -1342,30 +1441,54 @@ a:not(.btn):hover {
                         </div>
 
                         <section class="section">
-                            <h2 class="section-title">Usługi</h2>
+                            <h2 class="section-title">Usługi i doradztwo</h2>
                             <div class="services-grid">
                                 <div class="service-card">
-                                    <span class="material-symbols-outlined service-icon">chat</span>
+                                    <span class="material-symbols-outlined service-icon">fact_check</span>
                                     <div class="service-content">
-                                        <h3 class="service-title">Konsultacje</h3>
-                                        <p class="service-description">Specjalistyczne porady dotyczące strategii Wikipedii, encyklopedyczności, SEO i tworzenia treści.</p>
+                                        <h3 class="service-title">Audyt i Konsultacje</h3>
+                                        <p class="service-description">Weryfikacja encyklopedyczności (notability) i analiza źródeł. Dowiesz się, czy Twój temat spełnia wymogi Wikipedii, zanim podejmiesz ryzyko publikacji.</p>
                                     </div>
                                 </div>
+
                                 <div class="service-card">
-                                    <span class="material-symbols-outlined service-icon">school</span>
+                                    <span class="material-symbols-outlined service-icon">verified_user</span>
                                     <div class="service-content">
-                                        <h3 class="service-title">Szkolenia</h3>
-                                        <p class="service-description">Zaawansowane kursy, które pozwolą Ci opanować Wikipedię dla sukcesu w marketingu i SEO.</p>
+                                        <h3 class="service-title">Etyczne Edycje (COI)</h3>
+                                        <p class="service-description">Tworzenie i aktualizacja haseł zgodnie z wymogami Fundacji Wikimedia (płatny wkład). Zarządzanie reputacją (ORM) oparte na faktach, neutralnym punkcie widzenia, oraz wiarygodnych źródłach.</p>
                                     </div>
                                 </div>
+
                                 <div class="service-card">
-                                    <span class="material-symbols-outlined service-icon">edit_note</span>
+                                    <span class="material-symbols-outlined service-icon">auto_graph</span>
                                     <div class="service-content">
-                                        <h3 class="service-title">Profesjonalne Edycje</h3>
-                                        <p class="service-description">Zgodne z zasadami tworzenie i edycja artykułów w Wikipedii, Wikidata i Wikimedia Commons.</p>
+                                        <h3 class="service-title">Szkolenia Wikipedia &amp; SEO</h3>
+                                        <p class="service-description">Szkolenia dla agencji SEO oraz działów PR i marketingu. Nauczę Twój zespół, jak samodzielnie oceniać encyklopedyczność, poruszać się po strukturze technicznej Wikipedii i edytować zgodnie z rygorystycznymi zasadami społeczności, by budować trwałą obecność marki bez ryzyka blokady i wykorzystywać powiązane projekty do budowania grafu wiedzy marki w Google.</p>
                                     </div>
                                 </div>
                             </div>
+                        </section>
+
+                        <section class="section">
+                            <h2 class="section-title">Dla kogo jest to szkolenie i doradztwo?</h2>
+                            <ul class="audience-list">
+                                <li class="audience-item">
+                                    <h3 class="audience-title">Agencje SEO i Content Marketingowe</h3>
+                                    <p class="audience-desc">Chcesz bezpiecznie budować Graf Wiedzy (Knowledge Graph) dla swoich klientów? Nauczę Twój zespół, jak edytować Wikidata i Wikipedię bez ryzyka blokady kont firmowych oraz jak wykorzystać projekty siostrzane do wzmocnienia autorytetu domeny (E-E-A-T).</p>
+                                </li>
+                                <li class="audience-item">
+                                    <h3 class="audience-title">Działy PR i Komunikacji (In-house)</h3>
+                                    <p class="audience-desc">Twoja firma potrzebuje profesjonalnej obecności w encyklopedii, ale boisz się oskarżeń o kryptoreklamę? Dowiesz się, jak transparentnie zarządzać Konfliktem Interesów (COI) i jak rozmawiać z administratorami, używając ich własnego języka i argumentów.</p>
+                                </li>
+                                <li class="audience-item">
+                                    <h3 class="audience-title">Specjaliści Personal Brandingu</h3>
+                                    <p class="audience-desc">Budujesz wizerunek eksperta lub osoby publicznej? Pomogę Ci zrozumieć kryteria encyklopedyczności (WP:BIO), aby Twój biogram był trwały, rzetelny i odporny na próby usunięcia przez społeczność.</p>
+                                </li>
+                                <li class="audience-item">
+                                    <h3 class="audience-title">Właściciele e-commerce i Innowatorzy</h3>
+                                    <p class="audience-desc">Twoja marka tworzy unikalne technologie lub produkty? Dowiesz się, czy Twoje działania kwalifikują się do uwiecznienia w największej encyklopedii świata i jak przygotować źródła, których nikt nie podważy.</p>
+                                </li>
+                            </ul>
                         </section>
 
                         <section class="section">
@@ -1377,6 +1500,18 @@ a:not(.btn):hover {
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
                                     </summary>
                                     <p class="accordion-content">Wprowadzenie do historii Wikipedii, jej zasad działania i struktury społeczności. Dowiesz się, jak poruszać się po projekcie, gdzie szukać pomocy i jak rozumieć reguły rządzące encyklopedią.</p>
+                                </details>
+                                <details class="accordion-item">
+                                    <summary class="accordion-summary">
+                                        <h3 class="accordion-title">Żargon i komunikacja – jak rozmawiać z administratorami?</h3>
+                                        <span class="material-symbols-outlined accordion-icon">expand_more</span>
+                                    </summary>
+                                    <p class="accordion-content">
+                                        Nauczysz się języka, którym posługują się edytorzy i administratorzy. Dowiesz się, co oznaczają kluczowe skróty: <strong>DNU</strong>, <strong>EK</strong>, <strong>WP:WER</strong> czy <strong>WP:NPOV</strong>. Poznasz <strong>Uzus</strong> panujący w projektach Wikimedia, dzięki czemu Twoja komunikacja na stronach dyskusji będzie profesjonalna i skuteczna.
+                                    </p>
+                                    <p class="accordion-content">
+                                        Dowiesz się gdzie szukać pomocy, jak poruszać się po Wikipedii oraz jak wygląda komunikacja między Wikipedystami.
+                                    </p>
                                 </details>
                                 <details class="accordion-item">
                                     <summary class="accordion-summary">
@@ -1413,6 +1548,33 @@ a:not(.btn):hover {
                                     </summary>
                                     <p class="accordion-content">Prawa autorskie w kontekście Wikipedii, licencje wolne oraz Wikimedia Commons — miejsce, gdzie przechowuje się zdjęcia i multimedia. Nauczysz się poprawnie dodawać obrazy zgodnie z zasadami projektu.</p>
                                 </details>
+                                <details class="accordion-item">
+                                    <summary class="accordion-summary">
+                                        <h3 class="accordion-title">Wikidane a Google Knowledge Graph</h3>
+                                        <span class="material-symbols-outlined accordion-icon">expand_more</span>
+                                    </summary>
+                                    <p class="accordion-content">Nauczysz się edytować Wikidata. Serce danych strukturalnych ekosystemu Wikimedia. Dowiesz się, jak poprawnie definiować podmioty (entity), aby zwiększyć szansę na pojawienie się marki w Grafie Wiedzy Google (panel boczny w wyszukiwarce) oraz jak łączyć dane między różnymi projektami.</p>
+                                </details>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2 class="section-title">Bonusy dla uczestników szkolenia</h2>
+                            <div class="bonuses">
+                                <div class="bonus-item">
+                                    <span class="material-symbols-outlined bonus-icon">workspace_premium</span>
+                                    <div class="bonus-content">
+                                        <h3 class="bonus-title">Certyfikat ukończenia szkolenia</h3>
+                                        <p class="bonus-desc">Po ukończeniu szkolenia otrzymasz imienny certyfikat potwierdzający zdobyte umiejętności edycji Wikipedii.</p>
+                                    </div>
+                                </div>
+                                <div class="bonus-item">
+                                    <span class="material-symbols-outlined bonus-icon">support_agent</span>
+                                    <div class="bonus-content">
+                                        <h3 class="bonus-title">Stały dostęp do konsultacji w preferencyjnej cenie</h3>
+                                        <p class="bonus-desc">🎁 Absolwenci szkoleń otrzymują stały dostęp do konsultacji w cenie <strong>190 zł netto / godz</strong>.</p>
+                                    </div>
+                                </div>
                             </div>
                         </section>
 
