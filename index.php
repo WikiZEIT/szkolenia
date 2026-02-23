@@ -1420,16 +1420,16 @@ a:not(.btn):hover {
                             <h2 class="section-title">Cennik</h2>
                             <div class="pricing-grid">
                                 <div class="pricing-card">
-                                    <h3 class="pricing-title">Konsultacje Wikipedia SEO/Marketing</h3>
+                                    <h3 class="pricing-title">Konsultacje i Audyt Encyklopedyczności</h3>
                                     <p class="pricing-description">Indywidualne sesje strategiczne, aby rozwiązać Twoje konkretne wyzwania związane z Wikipedią.</p>
                                     <div class="pricing-amount">
                                         <p class="pricing-name">Konsultacje</p>
-                                        <p class="pricing-price">250zł/godz.</p>
+                                        <p class="pricing-price">250zł netto / godz.</p>
                                     </div>
                                     <ul class="pricing-features">
                                         <li class="pricing-feature">
                                             <span class="material-symbols-outlined feature-icon">check_circle</span>
-                                            <span>Analiza Encyklopedyczności (darmowa)</span>
+                                            <span>Analiza Encyklopedyczności</span>
                                         </li>
                                         <li class="pricing-feature">
                                             <span class="material-symbols-outlined feature-icon">check_circle</span>
@@ -1441,7 +1441,7 @@ a:not(.btn):hover {
                                         </li>
                                         <li class="pricing-feature">
                                             <span class="material-symbols-outlined feature-icon">check_circle</span>
-                                            <span>Tworzenie Artykułu od zera (płatna edycja)</span>
+                                            <span>Tworzenie Artykułu od zera</span>
                                         </li>
                                     </ul>
                                      <a href="#kontakt" class="btn btn-primary btn-full" data-subject="Konsultacje z Wikipedii">
@@ -1458,7 +1458,7 @@ a:not(.btn):hover {
                                     <p class="pricing-description">Kompleksowy kurs dla zespołów i indywidualistów, aby samodzielnie zarządzać obecnością w Wikipedii.</p>
                                     <div class="pricing-amount">
                                         <p class="pricing-name">Szkolenie Grupowe</p>
-                                        <p class="pricing-price">2999 zł (599zł/os.)</p>
+                                        <p class="pricing-price">2999 zł netto (599zł/os.)</p>
                                     </div>
                                     <ul class="pricing-features">
                                         <li class="pricing-feature">
@@ -1489,7 +1489,7 @@ a:not(.btn):hover {
                                     <p class="pricing-description">Kompleksowy kurs dla jednej osoby, aby samodzielnie zarządzać obecnością w Wikipedii.</p>
                                     <div class="pricing-amount">
                                         <p class="pricing-name">Szkolenie</p>
-                                        <p class="pricing-price">999 zł</p>
+                                        <p class="pricing-price">999 zł netto</p>
                                     </div>
                                     <ul class="pricing-features">
                                         <li class="pricing-feature">
