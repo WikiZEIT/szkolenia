@@ -310,6 +310,7 @@ if (isset($_GET['auth'])) {
             var stored = localStorage.getItem('wikipedia:colorScheme');
             var dark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
             document.documentElement.classList.add(dark ? 'dark' : 'light');
+            document.documentElement.classList.add('icons-hidden');
         })();
     </script>
     <title>Wikipedia Konsultacje i Szkolenia</title>
@@ -324,6 +325,10 @@ if (isset($_GET['auth'])) {
 
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.icons-hidden .material-symbols-outlined {
+    visibility: hidden;
 }
 
 /* CSS Variables */
@@ -1945,6 +1950,21 @@ a:not(.btn):hover {
                 document.getElementById('subject').value = title;
             });
         });
+
+        (function() {
+            function icons_ready() {
+                document.documentElement.classList.remove('icons-hidden');
+            }
+            if (document.fonts && document.fonts.ready) {
+                if (document.fonts.status === 'loaded') {
+                    icons_ready();
+                } else {
+                    document.fonts.ready.then(icons_ready);
+                }
+            } else {
+                icons_ready();
+            }
+        })();
     </script>
 </body>
 </html>
