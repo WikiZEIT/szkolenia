@@ -1429,7 +1429,7 @@ a:not(.btn):hover {
                                     <ul class="pricing-features">
                                         <li class="pricing-feature">
                                             <span class="material-symbols-outlined feature-icon">check_circle</span>
-                                            <span>Analiza Encyklopedyczności</span>
+                                            <span>Analiza Encyklopedyczności (darmowa)</span>
                                         </li>
                                         <li class="pricing-feature">
                                             <span class="material-symbols-outlined feature-icon">check_circle</span>
@@ -1548,7 +1548,7 @@ a:not(.btn):hover {
                                 <div class="about-avatar">
                                     <img src="./avatar-sm.jpg" alt="Jakub T. Jankiewicz portrait"/>
                                 </div>
-                                <p class="about-text">Nazywam się <a href="https://jakub.jankiewicz.org/">Jakub T. Jankiewicz</a>. Jestem Redaktorem w Polskiej Wikipedii, gdzie jestem także WikiTrenerem (prowadzę szkolenia na temat Wikipedii) oraz WikiPrzewodnikiem dla początkujących.</p>
+                                <p class="about-text">Nazywam się <a href="https://jakub.jankiewicz.org/">Jakub T. Jankiewicz</a>. Jestem Redaktorem w Polskiej Wikipedii, gdzie jestem także WikiTrenerem (prowadzę szkolenia na temat Wikipedii dla <a href="https://wikimedia.pl/">Wikimedia Polska</a>) oraz WikiPrzewodnikiem dla początkujących.</p>
                             </div>
                         </section>
 
