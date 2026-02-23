@@ -13,16 +13,18 @@ session_start();
 $prev_result = isset($_SESSION['result']) ? $_SESSION['result'] : null;
 $_SESSION['result'] = $result;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+$is_request = $_SERVER['REQUEST_METHOD'] === 'POST';
+
+if ($is_request) {
     $email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
     $user_message = htmlspecialchars($_POST['message'] ?? '', ENT_QUOTES, 'UTF-8');
     if (is_spam()) {
         $error_message = "Wygląda na to że nie jesteś człowiem!";
     } else if (filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($user_message)) {
         $to = 'jcubic@jcubic.pl';
-        $subject = 'Interest in tracking.ninja domain';
-        $body = "New inquiry about tracking.ninja domain:\n\n";
-        $body .= "From: " . $email . "\n\n";
+        $subject = $_POST['subject'];
+        $body = "Wiadomość ze strony https://jcubic.pl/wikipedia/:\n\n";
+        $body .= "From: " . $email . "\n";
         $body .= "Message:\n" . $user_message;
 
         $headers = "From: jcubic@jcubic.pl\r\n";
@@ -1067,6 +1069,37 @@ details[open] .accordion-icon {
     }
 }
 
+.form-message {
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius-lg);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.form-message-success {
+    background-color: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.form-message-error {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.dark .form-message-success {
+    background-color: #052e16;
+    color: #86efac;
+    border-color: #166534;
+}
+
+.dark .form-message-error {
+    background-color: #450a0a;
+    color: #fca5a5;
+    border-color: #991b1b;
+}
+
 /* Footer */
 .footer {
     width: 100%;
@@ -1385,7 +1418,7 @@ details[open] .accordion-icon {
                                             <span>Certyfikat ukończenia</span>
                                         </li>
                                     </ul>
-                                    <a href="#kontakt" class="btn btn-primary btn-full" data-title="Szkolenie 'Wikipedia+SEO'">
+                                    <a href="#kontakt" class="btn btn-primary btn-full" data-title="Szkolenie indywidualne 'Wikipedia+SEO'">
                                         <span>Rezerwuj</span>
                                     </a>
                                 </div>
@@ -1460,7 +1493,7 @@ details[open] .accordion-icon {
                                 <h2 class="contact-title">Kontakt</h2>
                                 <p class="contact-subtitle">Masz pytanie lub chcesz omówić swój projekt? Wypełnij formularz, a skontaktuję się z Tobą jak najszybciej.</p>
                             </div>
-                            <form class="contact-form">
+                            <form class="contact-form" method="POST">
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label class="form-label" for="name">Imię i nazwisko</label>
@@ -1484,6 +1517,11 @@ details[open] .accordion-icon {
                                     <input class="form-input" type="text" id="email_confirmation" name="email_confirmation" required placeholder="="/>
                                 </div>
                                 <div class="form-submit">
+                                    <?php if ($message_sent): ?>
+                                        <p class="form-message form-message-success">✅ Wiadomość została wysłana. Odezwę się wkrótce!</p>
+                                    <?php elseif (!empty($error_message)): ?>
+                                        <p class="form-message form-message-error">❌ <?= htmlspecialchars($error_message) ?></p>
+                                    <?php endif; ?>
                                     <button class="btn btn-primary btn-submit" type="submit">
                                         <span>Wyślij wiadomość</span>
                                     </button>
