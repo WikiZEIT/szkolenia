@@ -25,6 +25,48 @@ $faq = [
     ],
 ];
 
+$person = json_decode(file_get_contents('person.json'), true);
+$personId = 'https://jakub.jankiewicz.org';
+$person['id'] = $personId;
+
+$graph = [
+    "@context" => "https://schema.org",
+    "@graph" => [
+        $person,
+        [
+            "@type" => "Service",
+            "name" => "Konsultacje Wikipedia SEO",
+            "provider" => ["@id" => $personId],
+            "description" => "Indywidualne konsultacje oraz audyt encyklopedyczności dla firm i marek osobistych.",
+            "offers" => [
+                "@type" => "Offer",
+                "price" => "250.00",
+                "priceCurrency" => "PLN"
+            ]
+        ],
+        [
+            "@type" => "Course",
+            "name" => "Szkolenie Wikipedia+SEO",
+            "description" => "Warsztaty z zakresu edycji Wikipedii i danych strukturalnych dla agencji SEO.",
+            "author" => ["@id" => $personId],
+            "provider" => ["@id" => $personId]
+        ],
+        [
+            '@type'      => 'FAQPage',
+            'mainEntity' => array_map(function($item) {
+                return [
+                    '@type'          => 'Question',
+                    'name'           => $item['question'],
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text'  => $item['answer'],
+                    ],
+                ];
+            }, $faq)
+        ]
+    ]
+];
+
 session_start();
 $prev_result = isset($_SESSION['result']) ? $_SESSION['result'] : null;
 $_SESSION['result'] = $result;
@@ -1474,21 +1516,7 @@ a:not(.btn):hover {
     <link rel="canonical" href="https://jcubic.pl/wikipedia/" />
     <script type="application/ld+json">
     <?php
-    $faq_jsonld = [
-        '@context'   => 'https://schema.org',
-        '@type'      => 'FAQPage',
-        'mainEntity' => array_map(function($item) {
-            return [
-                '@type'          => 'Question',
-                'name'           => $item['question'],
-                'acceptedAnswer' => [
-                    '@type' => 'Answer',
-                    'text'  => $item['answer'],
-                ],
-            ];
-        }, $faq),
-    ];
-    echo json_encode($faq_jsonld, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+    echo json_encode($graph, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     ?>
     </script>
 </head>
