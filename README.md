@@ -21,5 +21,5 @@ Projekt **Wikipedia+SEO** powstał, aby wypełnić lukę między światem market
 Nazywam się **Jakub T. Jankiewicz**. Jestem Redaktorem Polskiej Wikipedii oraz twórcą projektów Open Source (m.in. [jQuery Terminal](https://terminal.jcubic.pl)). Łączę inżynierską precyzję z unikalną wiedzą o mechanizmach społecznościowych Wikimedia.
 
 ## License
-Copyright (c) 2026 [Jakub T. Jankiewicz](https://jakub.jankiewicz.org/)
+Copyright (c) 2026 [Jakub T. Jankiewicz](https://jakub.jankiewicz.org/)<br/>
 All Rights Reseved
