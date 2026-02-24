@@ -1,7 +1,7 @@
 <?php
 define('TOKEN_FILE', __DIR__ . '/allegro_tokens.json');
-define('CLIENT_ID', 'e4aa5beb230c4054bf0de66c58a5a832');
-define('CLIENT_SECRET', 'd77uP787DGfoPsH9gxOG8lz9a0jRoGX5dpNPFRxY4q7pVCVu4hS3hnP7uJ6c5Tzw');
+define('CLIENT_ID', '...');
+define('CLIENT_SECRET', '...');
 
 $message_sent = false;
 $error_message = '';
