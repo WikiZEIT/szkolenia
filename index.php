@@ -1670,7 +1670,14 @@ a:not(.btn):hover {
                                     <span class="material-symbols-outlined bonus-icon">support_agent</span>
                                     <div class="bonus-content">
                                         <h3 class="bonus-title">Stały dostęp do konsultacji w preferencyjnej cenie</h3>
-                                        <p class="bonus-desc">🎁 Absolwenci szkoleń otrzymują stały dostęp do konsultacji w cenie <strong>190 zł netto / godz</strong>.</p>
+                                        <p class="bonus-desc">Absolwenci szkoleń otrzymują stały dostęp do konsultacji w cenie <strong>190 zł netto / godz</strong>.</p>
+                                    </div>
+                                </div>
+                                <div class="bonus-item">
+                                    <span class="material-symbols-outlined bonus-icon">contact_support</span>
+                                    <div class="bonus-content">
+                                        <h3 class="bonus-title">Gwarancja wsparcia</h3>
+                                        <p class="bonus-desc">Zostanę Twoim Wiki-Przewodnikiem, abyś mógł bezpiecznie zadawać pytania wewnątrz Wikipedii.</p>
                                     </div>
                                 </div>
                             </div>
