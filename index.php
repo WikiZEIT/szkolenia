@@ -27,7 +27,6 @@ $faq = [
 
 $person = json_decode(file_get_contents('person.json'), true);
 $personId = 'https://jakub.jankiewicz.org';
-$person['id'] = $personId;
 
 $graph = [
     "@context" => "https://schema.org",
