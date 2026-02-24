@@ -2,6 +2,7 @@
 define('TOKEN_FILE', __DIR__ . '/allegro_tokens.json');
 define('CLIENT_ID', '...');
 define('CLIENT_SECRET', '...');
+define('ALLEGRO_ENABLED', false);
 
 $message_sent = false;
 $error_message = '';
@@ -177,7 +178,7 @@ function fetch_offer_data($query) {
     return $data['offers'][0]['saleInfo']['currentPrice']['amount'];
 }
 
-if (isset($_GET['auth'])) {
+if (isset($_GET['auth']) && ALLEGRO_ENABLED) {
     session_start();
 
     $auth_header = base64_encode(CLIENT_ID . ':' . CLIENT_SECRET);
