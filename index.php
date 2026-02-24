@@ -1011,6 +1011,29 @@ details[open] .accordion-icon {
     color: var(--color-gray-300);
 }
 
+.testimonial-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.translate-toggle {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.translate-toggle:hover {
+    opacity: 0.8;
+}
+
 .testimonial-footer {
     margin-top: auto;
     padding-top: 1rem;
@@ -1785,7 +1808,11 @@ a:not(.btn):hover {
                             <div class="testimonials-grid">
                                 <div class="testimonial-card">
                                     <span class="material-symbols-outlined testimonial-quote">format_quote</span>
-                                    <blockquote class="testimonial-text">"I came across Jakub's website when we were trying to solve a problem with rendering of terminal outputs. I&nbsp;contacted him for help. He immediately responded and started helping us. He knows Javascript very well and has in-depth knowledge of implementing terminals in JavaScript. He went above and beyond and quickly put together a&nbsp;code that we could use for our purpose. Wherever he could not help, he pointed us in the right direction. This was a small project but a&nbsp;great experience dealing with Jakub from Poland! Thank you Jakub."</blockquote>
+                                    <div class="testimonial-body">
+                                        <blockquote class="testimonial-text testimonial-original">"I came across Jakub's website when we were trying to solve a problem with rendering of terminal outputs. I&nbsp;contacted him for help. He immediately responded and started helping us. He knows Javascript very well and has in-depth knowledge of implementing terminals in JavaScript. He went above and beyond and quickly put together a&nbsp;code that we could use for our purpose. Wherever he could not help, he pointed us in the right direction. This was a small project but a&nbsp;great experience dealing with Jakub from Poland! Thank you Jakub."</blockquote>
+                                        <blockquote class="testimonial-text testimonial-translation" hidden>„Trafiłem na stronę Jakuba, gdy próbowaliśmy rozwiązać problem z renderowaniem danych wyjściowych terminala. Skontaktowałem się z nim po pomoc. Odpowiedział natychmiast i zaczął nam pomagać. Bardzo dobrze zna JavaScript i posiada dogłębną wiedzę na temat implementacji terminali w JavaScript. Wyszedł ponad oczekiwania i szybko przygotował kod, którego mogliśmy użyć. Tam, gdzie nie mógł pomóc, wskazał nam właściwy kierunek. Był to mały projekt, ale świetne doświadczenie we współpracy z Jakubem z Polski! Dziękuję, Jakub."</blockquote>
+                                        <button class="translate-toggle" type="button">Przetłumacz</button>
+                                    </div>
                                     <footer class="testimonial-footer">
                                         <p class="testimonial-name">Sarang Dharmapurikar</p>
                                         <p class="testimonial-position">CEO, <a href="https://www.dagknows.com/" target="_blank" rel="noopener">DagKnows Inc</a></p>
@@ -1793,7 +1820,11 @@ a:not(.btn):hover {
                                 </div>
                                 <div class="testimonial-card">
                                     <span class="material-symbols-outlined testimonial-quote">format_quote</span>
-                                    <blockquote class="testimonial-text">"Jakub is an expert in his field. I hired him to help with my project and he made a solution. He is pleasant to deal with and his time is well worth the price. Thanks Jakub."</blockquote>
+                                    <div class="testimonial-body">
+                                        <blockquote class="testimonial-text testimonial-original">"Jakub is an expert in his field. I hired him to help with my project and he made a solution. He is pleasant to deal with and his time is well worth the price. Thanks Jakub."</blockquote>
+                                        <blockquote class="testimonial-text testimonial-translation" hidden>„Jakub jest ekspertem w swojej dziedzinie. Zatrudniłem go do pomocy przy moim projekcie i opracował rozwiązanie. Miło się z nim pracuje, a jego czas jest wart swojej ceny. Dzięki, Jakub."</blockquote>
+                                        <button class="translate-toggle" type="button">Przetłumacz</button>
+                                    </div>
                                     <footer class="testimonial-footer">
                                         <p class="testimonial-name">Ordo</p>
                                         <p class="testimonial-position">Klient, <a href="https://support.jcubic.pl/" target="_blank" rel="noopener">support.jcubic.pl</a></p>
@@ -1801,7 +1832,11 @@ a:not(.btn):hover {
                                 </div>
                                 <div class="testimonial-card">
                                     <span class="material-symbols-outlined testimonial-quote">format_quote</span>
-                                    <blockquote class="testimonial-text">"Jakub T. Jankiewicz shared his open source story for the book maintaine.rs, showcasing a diverse portfolio of projects driven by creativity and technical skill. From jQuery Terminal to isomorphic-git—a pure JavaScript Git client—Jakub's dedication as a maintainer continues to empower developers worldwide. Grateful for his contribution to the book and for his ongoing impact in open source."</blockquote>
+                                    <div class="testimonial-body">
+                                        <blockquote class="testimonial-text testimonial-original">"Jakub T. Jankiewicz shared his open source story for the book maintaine.rs, showcasing a diverse portfolio of projects driven by creativity and technical skill. From jQuery Terminal to isomorphic-git—a pure JavaScript Git client—Jakub's dedication as a maintainer continues to empower developers worldwide. Grateful for his contribution to the book and for his ongoing impact in open source."</blockquote>
+                                        <blockquote class="testimonial-text testimonial-translation" hidden>„Jakub T. Jankiewicz podzielił się swoją historią open source na potrzeby książki maintaine.rs, prezentując różnorodne portfolio projektów napędzanych kreatywnością i umiejętnościami technicznymi. Od jQuery Terminal po isomorphic-git — czysty klient Git w JavaScript — zaangażowanie Jakuba jako maintainera nadal wspiera deweloperów na całym świecie. Wdzięczny za jego wkład w książkę i ciągły wpływ na świat open source."</blockquote>
+                                        <button class="translate-toggle" type="button">Przetłumacz</button>
+                                    </div>
                                     <footer class="testimonial-footer">
                                         <p class="testimonial-name">Nick Vidal</p>
                                         <p class="testimonial-position">Open Source enthusiast, <a href="https://www.linkedin.com/in/nickvidal/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></p>
@@ -1809,7 +1844,11 @@ a:not(.btn):hover {
                                 </div>
                                 <div class="testimonial-card">
                                     <span class="material-symbols-outlined testimonial-quote">format_quote</span>
-                                    <blockquote class="testimonial-text">"I have worked with Kuba on a large scientific software project. Not only did he become known as an absolute expert in JavaScript and its frameworks, but he also quickly learned enough R and Shiny to be able to actively participate in the development of the server-side parts of the app. Kuba is passionate in what he's doing, hungry for knowledge and always eager to share what he has already learned."</blockquote>
+                                    <div class="testimonial-body">
+                                        <blockquote class="testimonial-text testimonial-original">"I have worked with Kuba on a large scientific software project. Not only did he become known as an absolute expert in JavaScript and its frameworks, but he also quickly learned enough R and Shiny to be able to actively participate in the development of the server-side parts of the app. Kuba is passionate in what he's doing, hungry for knowledge and always eager to share what he has already learned."</blockquote>
+                                        <blockquote class="testimonial-text testimonial-translation" hidden>„Pracowałem z Kubą przy dużym naukowym projekcie informatycznym. Nie dość, że stał się znany jako absolutny ekspert w JavaScript i jego frameworkach, to jeszcze szybko nauczył się na tyle R i Shiny, żeby aktywnie uczestniczyć w rozwoju części serwerowej aplikacji. Kuba jest pasjonatem tego, co robi, spragniony wiedzy i zawsze chętny do dzielenia się tym, czego się nauczył."</blockquote>
+                                        <button class="translate-toggle" type="button">Przetłumacz</button>
+                                    </div>
                                     <footer class="testimonial-footer">
                                         <p class="testimonial-name">Paweł Piątkowski</p>
                                         <p class="testimonial-position">Born-again bioinformatician, <a href="https://www.linkedin.com/in/pawel-piatkowski/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></p>
@@ -1817,7 +1856,11 @@ a:not(.btn):hover {
                                 </div>
                                 <div class="testimonial-card">
                                     <span class="material-symbols-outlined testimonial-quote">format_quote</span>
-                                    <blockquote class="testimonial-text">"I can highly recommend Jakub as a programmer and frontend expert. He has been an invaluable asset to our team, creating an open source project for terminal emulation in browser. Jakub is an excellent communicator who is always willing to offer advice and assistance. He provides long term support and is great at troubleshooting. His skills are top-notch and I highly recommend him."</blockquote>
+                                    <div class="testimonial-body">
+                                        <blockquote class="testimonial-text testimonial-original">"I can highly recommend Jakub as a programmer and frontend expert. He has been an invaluable asset to our team, creating an open source project for terminal emulation in browser. Jakub is an excellent communicator who is always willing to offer advice and assistance. He provides long term support and is great at troubleshooting. His skills are top-notch and I highly recommend him."</blockquote>
+                                        <blockquote class="testimonial-text testimonial-translation" hidden>„Mogę gorąco polecić Jakuba jako programistę i eksperta frontend. Był nieocenionym członkiem naszego zespołu, tworząc projekt open source do emulacji terminala w przeglądarce. Jakub świetnie się komunikuje i zawsze chętnie udziela porad i pomocy. Zapewnia długoterminowe wsparcie i doskonale radzi sobie z rozwiązywaniem problemów. Jego umiejętności są najwyższej klasy i gorąco go polecam."</blockquote>
+                                        <button class="translate-toggle" type="button">Przetłumacz</button>
+                                    </div>
                                     <footer class="testimonial-footer">
                                         <p class="testimonial-name">Tom Sapletta</p>
                                         <p class="testimonial-position">prototyping.pl, <a href="https://www.linkedin.com/in/tom-sapletta-com/en/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></p>
@@ -1825,7 +1868,11 @@ a:not(.btn):hover {
                                 </div>
                                 <div class="testimonial-card">
                                     <span class="material-symbols-outlined testimonial-quote">format_quote</span>
-                                    <blockquote class="testimonial-text">"Jakub is a JavaScript expert. His knowledge is really stunning. Jakub has always a thousand ideas how to solve problems and he doesn't refrain to communicate them openly. Beside the impressive technical skills Jakub is a very helpful person. One may learn a lot from Jakub."</blockquote>
+                                    <div class="testimonial-body">
+                                        <blockquote class="testimonial-text testimonial-original">"Jakub is a JavaScript expert. His knowledge is really stunning. Jakub has always a thousand ideas how to solve problems and he doesn't refrain to communicate them openly. Beside the impressive technical skills Jakub is a very helpful person. One may learn a lot from Jakub."</blockquote>
+                                        <blockquote class="testimonial-text testimonial-translation" hidden>„Jakub jest ekspertem JavaScript. Jego wiedza jest naprawdę imponująca. Jakub ma zawsze tysiąc pomysłów na rozwiązanie problemów i nie waha się otwarcie je komunikować. Oprócz imponujących umiejętności technicznych Jakub jest bardzo pomocną osobą. Można się od niego dużo nauczyć."</blockquote>
+                                        <button class="translate-toggle" type="button">Przetłumacz</button>
+                                    </div>
                                     <footer class="testimonial-footer">
                                         <p class="testimonial-name">Jakub Małecki</p>
                                         <p class="testimonial-position">Senior Data Scientist, <a href="https://www.linkedin.com/in/malecki-jakub/en/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></p>
@@ -1990,6 +2037,20 @@ a:not(.btn):hover {
                 icons_ready();
             }
         })();
+
+        document.querySelectorAll('.translate-toggle').forEach(function(btn) {
+            var body = btn.closest('.testimonial-body');
+            var original = body.querySelector('.testimonial-original');
+            var translation = body.querySelector('.testimonial-translation');
+            var translated = false;
+
+            btn.addEventListener('click', function() {
+                translated = !translated;
+                original.hidden = translated;
+                translation.hidden = !translated;
+                btn.textContent = translated ? 'Zobacz oryginał' : 'Przetłumacz';
+            });
+        });
     </script>
 </body>
 </html>
