@@ -1811,7 +1811,7 @@ a:not(.btn):hover {
 
                         <section class="section">
                             <h2 class="section-title">Opinie o wsparciu Open Source</h2>
-                            <p class="section-source">Źródła: <a href="https://support.jcubic.pl/" target="_blank" rel="noopener">support.jcubic.pl</a> oraz <a href="https://www.linkedin.com/in/jcubic/" target="_blank" rel="noopener">LinkedIn</a></p>
+                            <p class="section-source">Źródło: <a href="https://support.jcubic.pl/" target="_blank" rel="noopener">support.jcubic.pl</a></p>
                             <div class="testimonials-grid">
                                 <div class="testimonial-card">
                                     <span class="material-symbols-outlined testimonial-quote">format_quote</span>
@@ -1849,6 +1849,13 @@ a:not(.btn):hover {
                                         <p class="testimonial-position">Open Source enthusiast, <a href="https://www.linkedin.com/in/nickvidal/" target="_blank" rel="noopener" class="linkedin-link"><svg class="linkedin-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a></p>
                                     </footer>
                                 </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2 class="section-title">Opinie współpracowników</h2>
+                            <p class="section-source">Źródło: <a href="https://www.linkedin.com/in/jcubic/" target="_blank" rel="noopener">LinkedIn</a></p>
+                            <div class="testimonials-grid">
                                 <div class="testimonial-card">
                                     <span class="material-symbols-outlined testimonial-quote">format_quote</span>
                                     <div class="testimonial-body">
