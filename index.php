@@ -1695,7 +1695,7 @@ a:not(.btn):hover {
                         <section class="section">
                             <h2 class="section-title">Program szkolenia 'Wikipedia+SEO i nie tylko'</h2>
                             <div class="accordion">
-                                <details class="accordion-item" open>
+                                <details class="accordion-item">
                                     <summary class="accordion-summary">
                                         <h3 class="accordion-title">Historia i zasady Wikipedii</h3>
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
@@ -1704,7 +1704,7 @@ a:not(.btn):hover {
                                 </details>
                                 <details class="accordion-item">
                                     <summary class="accordion-summary">
-                                        <h3 class="accordion-title">Żargon i komunikacja – jak rozmawiać z administratorami?</h3>
+                                        <h3 class="accordion-title">Żargon i komunikacja, jak rozmawiać z administratorami?</h3>
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
                                     </summary>
                                     <p class="accordion-content">
@@ -1726,7 +1726,7 @@ a:not(.btn):hover {
                                         <h3 class="accordion-title">Tworzenie poprawnego artykułu</h3>
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
                                     </summary>
-                                    <p class="accordion-content">Jak zbudować poprawnie artykuł od podstaw — struktura, neutralny punkt widzenia (NPOV), formatowanie i wikitext. Wszystko wyjaśnione krok po kroku podczas szkolenia.</p>
+                                    <p class="accordion-content">Jak zbudować poprawnie artykuł od podstaw, struktura, neutralny punkt widzenia (NPOV), formatowanie i wikitext. Wszystko wyjaśnione krok po kroku podczas szkolenia.</p>
                                 </details>
                                 <details class="accordion-item">
                                     <summary class="accordion-summary">
