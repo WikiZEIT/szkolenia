@@ -45,41 +45,60 @@ $graph = [
     '@context' => 'https://schema.org',
     '@graph' => [
         $person,
+
         [
             '@type' => 'Offer',
+            '@id' => $consultation_id,
             'price' => '250.00',
             'priceCurrency' => 'PLN',
             'itemOffered' => [
                 '@type' => 'Service',
-                '@id' => $consultation_id,
+                '@id' => 'https://jcubic.pl',
                 'name' => 'Konsultacje Wikipedia SEO',
                 'description' => 'Indywidualne konsultacje oraz audyt encyklopedyczności dla firm i marek osobistych.',
                 'provider' => ['@id' => $person_id]
             ]
         ],
+
         [
             '@type' => 'Offer',
+            'name' => 'Szkolenie Wikipedia+SEO - Solo',
+            'price' => '999.00',
+            'priceCurrency' => 'PLN',
+            'itemOffered' => [
+                '@id' => $course_id
+            ]
+        ],
+
+        [
+            '@type' => 'Offer',
+            'name' => 'Szkolenie Wikipedia+SEO - Team',
             'priceSpecification' => [
                 '@type' => 'UnitPriceSpecification',
                 'priceCurrency' => 'PLN',
                 'minPrice' => '499.00',
-                'maxPrice' => '999.00',
+                'maxPrice' => '599.00',
                 'unitText' => 'osoba'
             ],
+            'description' => 'Cena przy zakupie pakietu grupowego (od 3 do 10 osób).',
             'itemOffered' => [
-                '@type' => 'Course',
-                '@id' => $course_id,
-                'name' => 'Szkolenie Wikipedia+SEO',
-                'description' => 'Kompleksowe szkolenie z edycji Wikipedii i danych strukturalnych.' .
-                               ' Cena zależna od liczby uczestników (499 zł - 999 zł/os). Pakiet uczestnika obejmuje:\n' .
-                               '- Imienny certyfikat ukończenia szkolenia\n' .
-                               '- Stały dostęp do konsultacji w cenie 190 zł netto/h\n' .
-                               '- Opiekę oficjalnego Wiki-Przewodnika wewnątrz Wikipedii\n' .
-                               '- Konfigurację osobistej strony z odnośnikami do narzędzi i procedur.',
-                'author' => ['@id' => $person_id],
-                'provider' => ['@id' => $person_id]
+                '@id' => $course_id
             ]
         ],
+
+        [
+            '@type' => 'Course',
+            '@id' => $course_id,
+            'name' => 'Szkolenie Wikipedia+SEO i nie tylko',
+            'description' => 'Kompleksowe szkolenie z edycji Wikipedii i danych strukturalnych. Pakiet obejmuje:\n' .
+                           '- Imienny certyfikat ukończenia szkolenia\n' .
+                           '- Stały dostęp do konsultacji w cenie 190 zł netto/h\n' .
+                           '- Opiekę oficjalnego Wiki-Przewodnika wewnątrz Wikipedii\n' .
+                           '- Konfigurację strony z odnośnikami do narzędzi.',
+            'author' => ['@id' => $person_id],
+            'provider' => ['@id' => $person_id]
+        ],
+
         [
             '@type' => 'FAQPage',
             'mainEntity' => array_map(function($item) {
