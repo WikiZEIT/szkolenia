@@ -13,14 +13,18 @@ $result = $a + $b;
 $faq = [
     [
         'question' => 'Ile trwa edycja artykułu na Wikipedii?',
-        'answer'   => 'Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godziny. Krócej gdy mam już przygotowany tekst i źródła.',
+        'answer'   => 'Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godziny. Krócej gdy mam już przygotowany tekst i źródła. Wyszkuwanie i czytanie źródeł może wydłużyć cały proces.',
+    ],
+    [
+        'question' => 'Jaki jest maksymalny koszt przygotowania jednego artykułu?',
+        'answer' => 'W przypadku <strong>standardowych zleceń</strong> (edycja artykułu do ok. 200 słów), stosuję <strong>górny limit 1000 zł netto</strong> za pojedynczą stronę. W trudnych przypadkach dostaniesz indywidualną wycenę.'
     ],
     [
         'question' => 'Czy edytujesz tylko w języku Polskim?',
-        'answer'   => 'Mogę pomóc także z edycją artykułów w języku Angielskim.',
+        'answer'   => 'Mogę pomóc także z edycją artykułów w języku Angielskim. Chociaż czas edycji może sie wydłużyć, w zależności od tematyki artykułu.',
     ],
     [
-        'question' => 'Czy możesz pomóc w dodaniu wpisu w Wikidata?',
+        'question' => 'Czy możesz pomóc w dodaniu wpisu w Wikidanych (Wikidata)?',
         'answer'   => 'Tak, zawsze dodaję wpis w Wikidata, gdy dodaję artykuł do Wikipedii. Mogę go także dodać, gdy twój temat nie nadaje się do Wikipedii.',
     ],
 ];
@@ -2003,10 +2007,10 @@ a:not(.btn):hover {
                                 <?php foreach ($faq as $item): ?>
                                 <details class="accordion-item">
                                     <summary class="accordion-summary">
-                                        <h3 class="accordion-title"><?= htmlspecialchars($item['question']) ?></h3>
+                                        <h3 class="accordion-title"><?= $item['question'] ?></h3>
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
                                     </summary>
-                                    <p class="accordion-content"><?= htmlspecialchars($item['answer']) ?></p>
+                                    <p class="accordion-content"><?= $item['answer'] ?></p>
                                 </details>
                                 <?php endforeach; ?>
                             </div>
