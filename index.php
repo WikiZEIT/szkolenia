@@ -47,12 +47,11 @@ $graph = [
         $person,
         [
             '@type' => 'Offer',
-            '@id' => $consultation_id,
             'price' => '250.00',
             'priceCurrency' => 'PLN',
             'itemOffered' => [
                 '@type' => 'Service',
-                '@id' => 'https://jcubic.pl',
+                '@id' => $consultation_id,
                 'name' => 'Konsultacje Wikipedia SEO',
                 'description' => 'Indywidualne konsultacje oraz audyt encyklopedyczności dla firm i marek osobistych.',
                 'provider' => ['@id' => $person_id]
@@ -60,7 +59,6 @@ $graph = [
         ],
         [
             '@type' => 'Offer',
-            '@id' => $course_id,
             'priceSpecification' => [
                 '@type' => 'UnitPriceSpecification',
                 'priceCurrency' => 'PLN',
@@ -70,7 +68,7 @@ $graph = [
             ],
             'itemOffered' => [
                 '@type' => 'Course',
-                '@id' => 'https://jcubic.pl',
+                '@id' => $course_id,
                 'name' => 'Szkolenie Wikipedia+SEO',
                 'description' => 'Szkolenie grupowe: cena zależna od liczby uczestników (499 zł - 999 zł/os).',
                 'author' => ['@id' => $person_id],
