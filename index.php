@@ -26,40 +26,67 @@ $faq = [
 ];
 
 $person = json_decode(file_get_contents('person.json'), true);
-$personId = 'https://jakub.jankiewicz.org';
+$person_id = 'https://jakub.jankiewicz.org';
+$course_id = 'https://jcubic.pl/wikipedia/#szkolenie';
+$consultation_id = 'https://jcubic.pl/wikipedia/#konsultacje';
+
+$offer_catalog = [
+    '@type' => 'OfferCatalog',
+    'name' => 'Katalog usług Wikipedia + SEO',
+    'itemListElement' => [
+        ['@id' => $consultation_id],
+        ['@id' => $course_id]
+    ]
+];
+
+$person['hasOfferCatalog'] = $offer_catalog;
 
 $graph = [
-    "@context" => "https://schema.org",
-    "@graph" => [
+    '@context' => 'https://schema.org',
+    '@graph' => [
         $person,
         [
-            "@type" => "Service",
-            "name" => "Konsultacje Wikipedia SEO",
-            "provider" => ["@id" => $personId],
-            "description" => "Indywidualne konsultacje oraz audyt encyklopedyczności dla firm i marek osobistych.",
-            "offers" => [
-                "@type" => "Offer",
-                "price" => "250.00",
-                "priceCurrency" => "PLN"
+            '@type' => 'Offer',
+            '@id' => $consultation_id,
+            'price' => '250.00',
+            'priceCurrency' => 'PLN',
+            'itemOffered' => [
+                '@type' => 'Service',
+                '@id' => 'https://jcubic.pl',
+                'name' => 'Konsultacje Wikipedia SEO',
+                'description' => 'Indywidualne konsultacje oraz audyt encyklopedyczności dla firm i marek osobistych.',
+                'provider' => ['@id' => $person_id]
             ]
         ],
         [
-            "@type" => "Course",
-            "name" => "Szkolenie Wikipedia+SEO",
-            "description" => "Warsztaty z zakresu edycji Wikipedii i danych strukturalnych dla agencji SEO.",
-            "author" => ["@id" => $personId],
-            "provider" => ["@id" => $personId]
+            '@type' => 'Offer',
+            '@id' => $course_id,
+            'priceSpecification' => [
+                '@type' => 'UnitPriceSpecification',
+                'priceCurrency' => 'PLN',
+                'minPrice' => '499.00',
+                'maxPrice' => '999.00',
+                'unitText' => 'osoba'
+            ],
+            'itemOffered' => [
+                '@type' => 'Course',
+                '@id' => 'https://jcubic.pl',
+                'name' => 'Szkolenie Wikipedia+SEO',
+                'description' => 'Szkolenie grupowe: cena zależna od liczby uczestników (499 zł - 999 zł/os).',
+                'author' => ['@id' => $person_id],
+                'provider' => ['@id' => $person_id]
+            ]
         ],
         [
-            '@type'      => 'FAQPage',
+            '@type' => 'FAQPage',
             'mainEntity' => array_map(function($item) {
                 return [
-                    '@type'          => 'Question',
-                    'name'           => $item['question'],
+                    '@type' => 'Question',
+                    'name' => $item['question'],
                     'acceptedAnswer' => [
                         '@type' => 'Answer',
-                        'text'  => $item['answer'],
-                    ],
+                        'text' => strip_tags($item['answer'])
+                    ]
                 ];
             }, $faq)
         ]
