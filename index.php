@@ -1733,6 +1733,13 @@ a:not(.btn):hover {
                                         <p class="bonus-desc">Zostanę Twoim Wiki-Przewodnikiem, abyś mógł bezpiecznie zadawać pytania wewnątrz Wikipedii.</p>
                                     </div>
                                 </div>
+                                <div class="bonus-item">
+                                  <span class="material-symbols-outlined bonus-icon">dashboard</span>
+                                  <div class="bonus-content">
+                                    <h3 class="bonus-title">Dodatkowe materiały</h3>
+                                    <p class="bonus-desc">Skonfiguruję dla Ciebie na Wikipedii stronę z odnośnikami do kluczowych procedur i narzędzi. Dzięki temu błyskawicznie dotrzesz do najważniejszych miejsc w Wikipedii bez błądzenia po systemie.</p>
+                                  </div>
+                                </div>
                             </div>
                         </section>
 
