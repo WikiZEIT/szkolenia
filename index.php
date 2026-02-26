@@ -1635,7 +1635,7 @@ a:not(.btn):hover {
                                         Pomagam firmom zrozumieć standardy Wikipedii, aby ich obecność tam była trwała i zgodna z zasadami społeczności. Masz problem z edycją? Twoja strona została skasowana? Chcesz wiedzieć dlaczego, trafiłeś w dobre miejsce.
                                     </h2>
                                 </div>
-                                <a href="#kontakt" class="btn btn-primary btn-hero" data-subject="Konsultacje z Wikipedii" data-body="Jestem zainteresowany darmowym adytem z Wikipedii">
+                                <a href="#kontakt" class="btn btn-primary btn-hero" data-subject="Konsultacje z Wikipedii" data-body="Jestem zainteresowany darmowym adytem z Wikipedii.">
                                     <span>Umów wstępny, darmowy audyt</span>
                                 </a>
                             </div>
