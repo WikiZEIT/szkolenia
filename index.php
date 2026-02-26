@@ -12,6 +12,10 @@ $result = $a + $b;
 
 $faq = [
     [
+        'question' => 'Jak opublikować artykuł na Wikipedii?',
+        'answer' => 'Aby dodać artykuł, który na pewno zostanie w Wikipedii, dobrze jest założyć najpierw konto (chociaż nie jest to technicznie wymagane) oraz zacząć w swoim brudnopisie. Gdy artykuł jest gotowy należy poprosić twojego przewodnika o sprawdzenie i ewentualną publikacje (czyli przeniesnie do przestrzni główej). Dodając artykuł należy pamiętać o naważniejszych zasadach: <a href="https://pl.wikipedia.org/wiki/WP:NPOV">neutralnym punkcie widzenia</a> , <a href="https://pl.wikipedia.org/wiki/WP:ENCY">encyklopedyczności tematu</a>, <a href="https://pl.wikipedia.org/wiki/WP:WER">wiarygodnych źródłach</a> oraz <a href="https://pl.wikipedia.org/wiki/WP:PA">poszanowaniu praw autorskich</a>.'
+    ],
+    [
         'question' => 'Ile trwa edycja artykułu na Wikipedii?',
         'answer'   => 'Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godziny. Krócej gdy mam już przygotowany tekst i źródła. Wyszkuwanie i czytanie źródeł może wydłużyć cały proces.',
     ],
