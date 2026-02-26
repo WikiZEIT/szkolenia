@@ -975,7 +975,6 @@ details[open] .accordion-icon {
 
 .pricing-description {
     margin-top: 0.5rem;
-    margin-bottom: auto;
     font-size: 0.875rem;
     color: var(--color-gray-600);
 }
@@ -985,7 +984,8 @@ details[open] .accordion-icon {
 }
 
 .pricing-amount {
-    margin: 1.5rem 0;
+    margin-top: 1.5rem;
+    margin-bottom: auto;
 }
 
 .pricing-name {
@@ -1034,6 +1034,7 @@ details[open] .accordion-icon {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    margin-top: 2em;
 }
 
 .pricing-feature {
@@ -1804,9 +1805,9 @@ a:not(.btn):hover {
                                         <span class="pricing-badge">Popularne</span>
                                          -->
                                     </div>
-                                    <p class="pricing-description">Kompleksowy kurs dla zespołów i indywidualistów, aby samodzielnie zarządzać obecnością w Wikipedii.</p>
+                                    <p class="pricing-description">Kompleksowy kurs dla zespołów, aby samodzielnie zarządzać obecnością w Wikipedii.</p>
                                     <div class="pricing-amount">
-                                        <p class="pricing-name">Dla Zespołu</p>
+                                        <p class="pricing-name">Szkolenie - Team</p>
                                         <p class="pricing-price" id="group-price">2999 zł netto (<span id="price-per-person">~599</span>zł/os.)</p>
                                     </div>
                                     <ul class="pricing-features">
@@ -1837,7 +1838,7 @@ a:not(.btn):hover {
                                     </div>
                                     <p class="pricing-description">Kompleksowy kurs dla jednej osoby, aby samodzielnie zarządzać obecnością w Wikipedii.</p>
                                     <div class="pricing-amount">
-                                        <p class="pricing-name">Dla Ciebie</p>
+                                        <p class="pricing-name">Szkolenie - Solo</p>
                                         <p class="pricing-price">999 zł netto</p>
                                     </div>
                                     <ul class="pricing-features">
