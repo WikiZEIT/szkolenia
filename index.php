@@ -1627,8 +1627,8 @@ a:not(.btn):hover {
                                         Pomagam firmom zrozumieć standardy Wikipedii, aby ich obecność tam była trwała i zgodna z zasadami społeczności. Masz problem z edycją? Twoja strona została skasowana? Chcesz wiedzieć dlaczego, trafiłeś w dobre miejsce.
                                     </h2>
                                 </div>
-                                <a href="#kontakt" class="btn btn-primary btn-hero" data-subject="Konsultacje z Wikipedii">
-                                    <span>Umów się na konsultację</span>
+                                <a href="#kontakt" class="btn btn-primary btn-hero" data-subject="Konsultacje z Wikipedii" data-body="Jestem zainteresowany darmowym adytem z Wikipedii">
+                                    <span>Umów wstępny, darmowy audyt</span>
                                 </a>
                             </div>
                         </div>
@@ -1813,8 +1813,8 @@ a:not(.btn):hover {
                                             <span>Tworzenie Artykułu od zera</span>
                                         </li>
                                     </ul>
-                                     <a href="#kontakt" class="btn btn-primary btn-full" data-subject="Konsultacje z Wikipedii" data-body="Jestem zainteresowany konsultacjami z Wikipedii.">
-                                        <span>Umów konsultację</span>
+                                     <a href="#kontakt" class="btn btn-primary btn-full" data-subject="Konsultacje z Wikipedii" data-body="Jestem zainteresowany darmowym audytem z Wikipedii.">
+                                        <span>Umów wstępny, darmowy audyt</span>
                                     </a>
                                 </div>
                                 <div class="pricing-card pricing-card-featured">
@@ -1848,7 +1848,7 @@ a:not(.btn):hover {
                                         </li>
                                     </ul>
                                     <a href="#kontakt" class="btn btn-primary btn-full grupowe" data-subject="Szkolenie dla zespołu 'Wikipedia+SEO'">
-                                        <span>Rezerwuj</span>
+                                        <span>Zapytaj o termin szkolenia</span>
                                     </a>
                                 </div>
                                 <div class="pricing-card pricing-card-featured">
@@ -1879,7 +1879,7 @@ a:not(.btn):hover {
                                         </li>
                                     </ul>
                                     <a href="#kontakt" class="btn btn-primary btn-full" data-subject="Szkolenie dla Ciebie 'Wikipedia+SEO'" data-body="Jestem zainteresowany szkoleniem dla jednej osoby.">
-                                        <span>Rezerwuj</span>
+                                        <span>Zapytaj o termin szkolenia</span>
                                     </a>
                                 </div>
                             </div>
