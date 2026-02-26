@@ -70,7 +70,12 @@ $graph = [
                 '@type' => 'Course',
                 '@id' => $course_id,
                 'name' => 'Szkolenie Wikipedia+SEO',
-                'description' => 'Szkolenie grupowe: cena zależna od liczby uczestników (499 zł - 999 zł/os).',
+                'description' => 'Kompleksowe szkolenie z edycji Wikipedii i danych strukturalnych.' .
+                               ' Cena zależna od liczby uczestników (499 zł - 999 zł/os). Pakiet uczestnika obejmuje:\n' .
+                               '- Imienny certyfikat ukończenia szkolenia\n' .
+                               '- Stały dostęp do konsultacji w cenie 190 zł netto/h\n' .
+                               '- Opiekę oficjalnego Wiki-Przewodnika wewnątrz Wikipedii\n' .
+                               '- Konfigurację osobistej strony z odnośnikami do narzędzi i procedur.',
                 'author' => ['@id' => $person_id],
                 'provider' => ['@id' => $person_id]
             ]
@@ -994,6 +999,23 @@ details[open] .accordion-icon {
     color: var(--color-gray-100);
 }
 
+.participants-select {
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-gray-300);
+    border-radius: var(--border-radius-lg);
+    background-color: var(--color-white);
+    font-size: 0.9375rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dark .participants-select {
+    background-color: var(--color-gray-700);
+    border-color: var(--color-gray-600);
+    color: var(--color-gray-100);
+}
+
 .pricing-price {
     font-size: 1.25rem;
     font-weight: 900;
@@ -1771,7 +1793,7 @@ a:not(.btn):hover {
                                             <span>Tworzenie Artykułu od zera</span>
                                         </li>
                                     </ul>
-                                     <a href="#kontakt" class="btn btn-primary btn-full" data-subject="Konsultacje z Wikipedii">
+                                     <a href="#kontakt" class="btn btn-primary btn-full" data-subject="Konsultacje z Wikipedii" data-body="Jestem zainteresowany konsultacjami z Wikipedii.">
                                         <span>Umów konsultację</span>
                                     </a>
                                 </div>
@@ -1784,8 +1806,8 @@ a:not(.btn):hover {
                                     </div>
                                     <p class="pricing-description">Kompleksowy kurs dla zespołów i indywidualistów, aby samodzielnie zarządzać obecnością w Wikipedii.</p>
                                     <div class="pricing-amount">
-                                        <p class="pricing-name">Szkolenie Grupowe</p>
-                                        <p class="pricing-price">2999 zł netto (599zł/os.)</p>
+                                        <p class="pricing-name">Dla Zespołu</p>
+                                        <p class="pricing-price" id="group-price">2999 zł netto (<span id="price-per-person">~599</span>zł/os.)</p>
                                     </div>
                                     <ul class="pricing-features">
                                         <li class="pricing-feature">
@@ -1805,7 +1827,7 @@ a:not(.btn):hover {
                                             <span>Certyfikat ukończenia</span>
                                         </li>
                                     </ul>
-                                    <a href="#kontakt" class="btn btn-primary btn-full" data-subject="Szkolenie Grupowe 'Wikipedia+SEO'">
+                                    <a href="#kontakt" class="btn btn-primary btn-full grupowe" data-subject="Szkolenie dla zespołu 'Wikipedia+SEO'">
                                         <span>Rezerwuj</span>
                                     </a>
                                 </div>
@@ -1815,7 +1837,7 @@ a:not(.btn):hover {
                                     </div>
                                     <p class="pricing-description">Kompleksowy kurs dla jednej osoby, aby samodzielnie zarządzać obecnością w Wikipedii.</p>
                                     <div class="pricing-amount">
-                                        <p class="pricing-name">Szkolenie</p>
+                                        <p class="pricing-name">Dla Ciebie</p>
                                         <p class="pricing-price">999 zł netto</p>
                                     </div>
                                     <ul class="pricing-features">
@@ -1836,7 +1858,7 @@ a:not(.btn):hover {
                                             <span>Certyfikat ukończenia</span>
                                         </li>
                                     </ul>
-                                    <a href="#kontakt" class="btn btn-primary btn-full" data-subject="Szkolenie indywidualne 'Wikipedia+SEO'">
+                                    <a href="#kontakt" class="btn btn-primary btn-full" data-subject="Szkolenie dla Ciebie 'Wikipedia+SEO'" data-body="Jestem zainteresowany szkoleniem dla jednej osoby.">
                                         <span>Rezerwuj</span>
                                     </a>
                                 </div>
@@ -2046,7 +2068,6 @@ a:not(.btn):hover {
             </div>
         </div>
     </div>
-    <script defer src="https://umami.jcubic.pl/script.js" data-website-id="74ae63b5-5715-4e73-89b8-3ecd1302c648"></script>
     <script>
         (function() {
             var STORAGE_KEY = 'wikipedia:colorScheme';
@@ -2092,8 +2113,10 @@ a:not(.btn):hover {
 
         document.querySelectorAll('.btn[data-subject]').forEach(function(btn) {
             btn.addEventListener('click', function() {
-                var title = this.dataset.title;
+                var title = this.dataset.subject;
+                var body = this.dataset.body ?? '';
                 document.getElementById('subject').value = title;
+                document.getElementById('message').value = body;
             });
         });
 
@@ -2125,7 +2148,66 @@ a:not(.btn):hover {
                 btn.textContent = translated ? 'Zobacz oryginał' : 'Przetłumacz';
             });
         });
+
+        function interpolate(pts) {
+            return (n) => {
+                if (n <= pts[0][0]) return pts[0][1];
+                if (n >= pts.at(-1)[0]) return pts.at(-1)[1];
+
+                const i = pts.findIndex((p, idx) => idx < pts.length-1 && n <= pts[idx+1][0]);
+                if (i < 0) return pts.at(-1)[1];
+
+                const [x0,y0] = pts[i];
+                const [x1,y1] = pts[i+1];
+
+                return Math.round(y0 + (n - x0) * (y1 - y0) / (x1 - x0));
+            };
+        }
+
+        (function() {
+            const strings = { many: 'osób', one: 'osoba', few: 'osoby' };
+            const pr = new Intl.PluralRules('pl-PL');
+
+            const price = interpolate([[2, 1700], [5, 2999], [10, 4999]]);
+
+            const groupPriceEl = document.getElementById('group-price');
+            const pricingAmount = groupPriceEl.closest('.pricing-amount');
+
+            const select = document.createElement('select');
+            select.className = 'participants-select';
+            select.id = 'participants';
+
+            for (let i = 2; i <= 10; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i + ' ' + strings[pr.select(i)];
+                if (i === 5) option.selected = true;
+                select.appendChild(option);
+            }
+
+            pricingAmount.appendChild(select);
+
+            function updatePrice() {
+                const n = parseInt(select.value, 10);
+                const totalPrice = price(n);
+                const pricePerPerson = Math.trunc(totalPrice / n);
+                groupPriceEl.innerHTML = totalPrice + ' zł netto (<span id="price-per-person">~' + pricePerPerson + '</span>zł/os.)';
+            }
+
+            select.addEventListener('change', updatePrice);
+
+            const reserveBtn = document.querySelector('.grupowe');
+            if (reserveBtn) {
+                reserveBtn.setAttribute('data-body', 'Jestem zainteresowany szkoleniem grupowym dla 5 osób.');
+                select.addEventListener('change', function() {
+                    const n = parseInt(select.value, 10);
+                    const person = strings[pr.select(n)];
+                    reserveBtn.setAttribute('data-body', `Jestem zainteresowany szkoleniem grupowym dla ${n} ${person}.`);
+                });
+            }
+        })();
     </script>
+    <script defer src="https://umami.jcubic.pl/script.js" data-website-id="74ae63b5-5715-4e73-89b8-3ecd1302c648"></script>
 </body>
 </html>
 <?php } ?>
