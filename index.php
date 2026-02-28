@@ -2,9 +2,9 @@
 /* Copyright (c) 2026 Jakub T. Jankiewicz
  * All Rights Reserved
  */
-define('TOKEN_FILE', __DIR__ . '/allegro_tokens.json');
-define('CLIENT_ID', '...');
-define('CLIENT_SECRET', '...');
+define('ALLEGRO_TOKEN_FILE', __DIR__ . '/allegro_tokens.json');
+define('ALLEGRO_CLIENT_ID', '...');
+define('ALLEGRO_CLIENT_SECRET', '...');
 define('ALLEGRO_ENABLED', false);
 
 $message_sent = false;
@@ -177,16 +177,16 @@ function dump($data) {
 
 // Sprawdza, czy plik z tokenami istnieje i ładuje dane
 function load_tokens() {
-    if (!file_exists(TOKEN_FILE)) {
+    if (!file_exists(ALLEGRO_TOKEN_FILE)) {
         return null;
     }
-    $content = file_get_contents(TOKEN_FILE);
+    $content = file_get_contents(ALLEGRO_TOKEN_FILE);
     return json_decode($content, true);
 }
 
 // Zapisuje tokeny do pliku
 function save_tokens($tokens) {
-    file_put_contents(TOKEN_FILE, json_encode($tokens, JSON_PRETTY_PRINT));
+    file_put_contents(ALLEGRO_TOKEN_FILE, json_encode($tokens, JSON_PRETTY_PRINT));
 }
 
 // Odświeża access_token przy użyciu refresh_token
@@ -197,7 +197,7 @@ function refresh_access_token() {
     }
 
     $url = 'https://allegro.pl/auth/oauth/token';
-    $auth = base64_encode(CLIENT_ID . ':' . CLIENT_SECRET);
+    $auth = base64_encode(ALLEGRO_CLIENT_ID . ':' . ALLEGRO_CLIENT_SECRET);
 
     $post_fields = http_build_query([
         'grant_type'    => 'refresh_token',
@@ -286,7 +286,7 @@ function fetch_offer_data($query) {
 if (isset($_GET['auth']) && ALLEGRO_ENABLED) {
     session_start();
 
-    $auth_header = base64_encode(CLIENT_ID . ':' . CLIENT_SECRET);
+    $auth_header = base64_encode(ALLEGRO_CLIENT_ID . ':' . ALLEGRO_CLIENT_SECRET);
 
     if (empty($_SESSION['allegro_device_code'])) {
 
@@ -298,7 +298,7 @@ if (isset($_GET['auth']) && ALLEGRO_ENABLED) {
             'Authorization: Basic ' . $auth_header,
             'Content-Type: application/x-www-form-urlencoded'
         ]);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, 'client_id=' . CLIENT_ID);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, 'client_id=' . ALLEGRO_CLIENT_ID);
 
         $response = curl_exec($ch);
         $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
@@ -347,7 +347,7 @@ if (isset($_GET['auth']) && ALLEGRO_ENABLED) {
         $token_data = json_decode($response, true);
         $token_data['expires_at'] = time() + $token_data['expires_in'];
 
-        file_put_contents(TOKEN_FILE, json_encode($token_data, JSON_PRETTY_PRINT));
+        file_put_contents(ALLEGRO_TOKEN_FILE, json_encode($token_data, JSON_PRETTY_PRINT));
 
         // Wyczyść sesję
         unset($_SESSION['allegro_device_code'], $_SESSION['allegro_interval']);
