@@ -2044,7 +2044,7 @@ a:not(.btn):hover {
                         <section class="section">
                             <div class="about-card">
                                 <div class="about-avatar">
-                                    <img src="./avatar-sm.jpg" alt="Jakub T. Jankiewicz portrait"/>
+                                    <img src="./avatar-sm.jpg" width="160" height="160" alt="Jakub T. Jankiewicz portrait"/>
                                 </div>
                                 <div class="about-body">
                                     <p class="about-text">Nazywam się <a href="https://jakub.jankiewicz.org/"><strong>Jakub T. Jankiewicz</strong></a>. Łączę świat technologii z rzetelną informacją, działając na styku programowania i wolnej wiedzy.</p>
