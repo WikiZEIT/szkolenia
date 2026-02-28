@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule allegro_tokens.json - [L,R=404]
