@@ -417,8 +417,25 @@ if (isset($_GET['auth']) && ALLEGRO_ENABLED) {
         })();
     </script>
     <title>Wikipedia Konsultacje i Szkolenia</title>
+    <meta name="description" content="Szkolenia i konsultacje z zakresu Wikipedii. Naucz się tworzyć trwałe artykuły, dbać o SEO i poruszać w świecie Wikimedia Commons. Profesjonalne wsparcie dla firm.">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://jcubic.pl/wikipedia/" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wikipedia Konsultacje i Szkolenia" />
+    <meta property="og:description" content="Szkolenia i konsultacje z zakresu Wikipedii. Naucz się tworzyć trwałe artykuły, dbać o SEO i poruszać w świecie Wikimedia Commons. Profesjonalne wsparcie dla firm." />
+    <meta property="og:image" content="https://jcubic.pl/wikipedia/social-card.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jcubic.pl/wikipedia/" />
+    <meta name="twitter:title" content="Wikipedia Konsultacje i Szkolenia" />
+    <meta name="twitter:description" content="Szkolenia i konsultacje z zakresu Wikipedii. Naucz się tworzyć trwałe artykuły, dbać o SEO i poruszać w świecie Wikimedia Commons. Profesjonalne wsparcie dla firm." />
+    <meta name="twitter:image" content="https://jcubic.pl/wikipedia/social-card.png" />
+
+    <!-- Meta Tags Generated via https://www.opengraph.io -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <style>
 /* Reset and base styles */
