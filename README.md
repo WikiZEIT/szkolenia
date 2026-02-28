@@ -1,5 +1,7 @@
 # [Wikipedia SEO & Marketing – Profesjonalne Szkolenia i Konsultacje](https://jcubic.pl/wikipedia)
 
+![Wikipedia+SEO social card](social-card.png)
+
 Oto oficjalne [repo](https://github.com/jcubic/wikipedia) strony projektu poświęconego edukacji w zakresie standardów encyklopedycznych, danych strukturalnych i budowania Grafu Wiedzy w Google.
 
 ## 🚀 O projekcie
