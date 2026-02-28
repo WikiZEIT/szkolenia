@@ -1,4 +1,7 @@
 <?php
+/* Copyright (c) 2026 Jakub T. Jankiewicz
+ * All Rights Reserved
+ */
 define('TOKEN_FILE', __DIR__ . '/allegro_tokens.json');
 define('CLIENT_ID', '...');
 define('CLIENT_SECRET', '...');
