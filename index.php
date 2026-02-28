@@ -1542,6 +1542,11 @@ a:not(.btn):hover {
     display: flex;
     gap: 1rem;
 }
+.footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 .footer-link {
     font-size: 0.875rem;
@@ -2108,9 +2113,12 @@ a:not(.btn):hover {
                     <footer class="footer">
                         <div class="footer-content">
                           <p class="footer-copyright">© 2025 <a href="https://jakub.jankiewicz.org">Jakub T. Jankiewicz</a>.</p>
-                            <div class="footer-links">
-                                <a class="footer-link" href="#"></a>
-                            </div>
+                          <div class="footer-links">
+                              <ul>
+                                  <li><a class="footer-link" href="/">Głównie JavaScript</a></li>
+                                  <li><a class="footer-link" href="https://github.com/jcubic/wikipedia">kod źródłowy</a></li>
+                              </ul>
+                          </div>
                         </div>
                     </footer>
                 </div>
