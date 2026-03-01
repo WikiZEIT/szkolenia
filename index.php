@@ -414,8 +414,8 @@ if (isset($_GET['auth']) && ALLEGRO_ENABLED) {
 <html lang="pl">
 <head>
     <meta charset="utf-8"/>
-    <title>Wikipedia Konsultacje i Szkolenia</title>
-    <meta name="description" content="Szkolenia i konsultacje z zakresu Wikipedii. Naucz się tworzyć trwałe artykuły, dbać o SEO i poruszać w świecie Wikimedia Commons. Profesjonalne wsparcie dla firm.">
+    <title>Wikipedia: Konsultacje i Szkolenia</title>
+    <meta name="description" content="Szkolenia i konsultacje z zakresu edycji Wikipedii, Wikidata i projektów siostrzanych. Profesjonalne wsparcie dla osób oraz firm SEO, PR, i personal brand.">
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
