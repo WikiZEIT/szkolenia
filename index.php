@@ -2047,7 +2047,7 @@ a:not(.btn):hover {
                           </ul>
                           <p class="logos-desc">Mój projekt Open Source <a href="https://terminal.jcubic.pl/">jQuery Terminal</a> był wykorzystywany przez:</p>
                           <ul class="logos-list">
-                            <li>Google w narzędzu do rekrutacji <a href="https://govanify.com/post/foobar/">FooBar</a>.</li>
+                            <li>Google wykorzystał go w narzędzu do rekrutacji <a href="https://govanify.com/post/foobar/">FooBar</a>.</li>
                             <li>DockDuckGo użyło go jako <a href="https://web.archive.org/web/20220608043747/https://duckduckgo.com/tty/">intefejs wyszukiwarki w stylu terminalowym</a>.</li>
                             <li>Docker używał go jako <a href="https://web.archive.org/web/20130822144120/https://www.docker.io/gettingstarted/">interaktywny samouczek</a>.</li>
                             <li>Codalab nadal używa go w swoich <a href="https://worksheets.codalab.org/worksheets">worksheets</a>.</li>
