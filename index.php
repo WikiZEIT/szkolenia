@@ -1229,6 +1229,98 @@ details[open] .accordion-icon {
     vertical-align: middle;
 }
 
+/* logos */
+.logos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logos li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem 1.75rem;
+    border-radius: var(--border-radius-xl);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    flex: 1 1 140px;
+    min-width: 120px;
+}
+
+.dark .logos li {
+    background-color: var(--color-background-dark);
+    border-color: var(--color-gray-800);
+}
+
+.logos img {
+    max-width: 120px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.2s, opacity 0.2s;
+}
+
+.logos li:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.dark .logos img {
+    filter: grayscale(100%) invert(1) brightness(1.5);
+    opacity: 0.6;
+}
+
+.dark .logos li:hover img {
+    filter: grayscale(0%) invert(0) brightness(1);
+    opacity: 1;
+}
+
+.logos-desc {
+    margin: 1.5rem 0 0.5rem;
+    color: var(--color-gray-600);
+    font-size: 0.9375rem;
+}
+
+.dark .logos-desc {
+    color: var(--color-gray-400);
+}
+
+.logos-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.logos-list li {
+    padding: 1rem 1rem 1rem 1.25rem;
+    border-left: 4px solid var(--color-primary);
+    border-radius: 0 var(--border-radius-xl) var(--border-radius-xl) 0;
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-gray-200);
+    border-right: 1px solid var(--color-gray-200);
+    border-bottom: 1px solid var(--color-gray-200);
+    color: var(--color-gray-600);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+.dark .logos-list li {
+    background-color: var(--color-background-dark);
+    border-top-color: var(--color-gray-800);
+    border-right-color: var(--color-gray-800);
+    border-bottom-color: var(--color-gray-800);
+    color: var(--color-gray-400);
+}
+
 /* About section */
 .about-card {
     display: flex;
@@ -1924,6 +2016,23 @@ a:not(.btn):hover {
                                     </a>
                                 </div>
                             </div>
+                        </section>
+
+                        <section class="section">
+                          <h2 class="section-title">Mój kod był wykorzystywany przez:</h2>
+                          <ul class="logos">
+                            <li><img src="./google.png" alt="Google" /></li>
+                            <li><img src="./docker.png" alt="Docker" /></li>
+                            <li><img src="./duckduckgo.png" alt="DuckDuckGo" /></li>
+                            <li><img src="./codalab.png" alt="CodaLab" /></li>
+                          </ul>
+                          <p class="logos-desc">Mój projekt Open Source <a href="https://terminal.jcubic.pl/">jQuery Terminal</a> był wykorzystywany przez:</p>
+                          <ul class="logos-list">
+                            <li>Google w narzędzu do rekrutacji <a href="https://govanify.com/post/foobar/">FooBar</a>.</li>
+                            <li>DockDuckGo użyło go jako <a href="https://web.archive.org/web/20220608043747/https://duckduckgo.com/tty/">intefejs wyszukiwarki w stylu terminalowym</a>.</li>
+                            <li>Docker używał go jako <a href="https://web.archive.org/web/20130822144120/https://www.docker.io/gettingstarted/">interaktywny samouczek</a>.</li>
+                            <li>Codalab nadal używa go w swoich <a href="https://worksheets.codalab.org/worksheets">worksheets</a>.</li>
+                          </ul>
                         </section>
 
                         <section class="section">
