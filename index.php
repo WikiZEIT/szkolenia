@@ -2036,7 +2036,7 @@ a:not(.btn):hover {
                         </section>
 
                         <section class="section">
-                          <h2 class="section-title">Mój kod był wykorzystywany przez:</h2>
+                          <h2 class="section-title">Mój kod był wykorzystywany przez</h2>
                           <ul class="logos">
                             <li><img src="./google.png" alt="Google" /></li>
                             <li><img src="./docker.png" alt="Docker" /></li>
