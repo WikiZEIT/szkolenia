@@ -421,6 +421,15 @@ if (isset($_GET['auth']) && ALLEGRO_ENABLED) {
             var dark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
             document.documentElement.classList.add(dark ? 'dark' : 'light');
             document.documentElement.classList.add('icons-hidden');
+
+            function icons_ready() {
+                document.documentElement.classList.remove('icons-hidden');
+            }
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(icons_ready);
+            } else {
+                icons_ready();
+            }
         })();
     </script>
     <title>Wikipedia Konsultacje i Szkolenia</title>
@@ -452,6 +461,14 @@ if (isset($_GET['auth']) && ALLEGRO_ENABLED) {
 
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    width: 1em;
 }
 
 .icons-hidden .material-symbols-outlined {
@@ -2292,21 +2309,6 @@ a:not(.btn):hover {
                 document.getElementById('message').value = body;
             });
         });
-
-        (function() {
-            function icons_ready() {
-                document.documentElement.classList.remove('icons-hidden');
-            }
-            if (document.fonts && document.fonts.ready) {
-                if (document.fonts.status === 'loaded') {
-                    icons_ready();
-                } else {
-                    document.fonts.ready.then(icons_ready);
-                }
-            } else {
-                icons_ready();
-            }
-        })();
 
         document.querySelectorAll('.translate-toggle').forEach(function(btn) {
             var body = btn.closest('.testimonial-body');
