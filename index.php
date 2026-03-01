@@ -31,6 +31,10 @@ $faq = [
         'answer'   => 'Mogę pomóc także z edycją artykułów w języku Angielskim. Chociaż czas edycji może sie wydłużyć, w zależności od tematyki artykułu.',
     ],
     [
+        'question' => 'Czy wystawiasz fakturę VAT?',
+        'answer'   => 'Jeśli potrzebujesz faktury możemy podpisać umowę przez UseMe.'
+    ],
+    [
         'question' => 'Czy możesz pomóc w dodaniu wpisu w Wikidanych (Wikidata)?',
         'answer'   => 'Tak, zawsze dodaję wpis w Wikidata, gdy dodaję artykuł do Wikipedii. Mogę go także dodać, gdy twój temat nie nadaje się do Wikipedii.',
     ],
