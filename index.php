@@ -1846,7 +1846,7 @@ a:not(.btn):hover {
                                 </details>
                                 <details class="accordion-item">
                                     <summary class="accordion-summary">
-                                        <h3 class="accordion-title">Żargon i komunikacja, jak rozmawiać z administratorami?</h3>
+                                        <h3 class="accordion-title">Żargon i komunikacja w Wikipedii</h3>
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
                                     </summary>
                                     <p class="accordion-content">
