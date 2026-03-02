@@ -35,6 +35,10 @@ $faq = [
         'answer'   => 'Jeśli potrzebujesz faktury możemy podpisać umowę przez <a href="https://useme.com/pl/roles/contractor/jakub-t-jankiewicz,187663/">UseMe</a>.'
     ],
     [
+        'question' => 'Czy uferujesz linki z Wikipedii?',
+        'answer'   => 'Nie mam tego w ofercie. Natomiast jeśli jesteś ekspertem SEO i szukasz linków z Wikipedii, możesz wziąć udział w moim szkoleniu, gdzie dowiesz się jak je dodawać samemu. Jest to jednorazowa inwestycja.'
+    ],
+    [
         'question' => 'Czy możesz pomóc w dodaniu wpisu w Wikidanych (Wikidata)?',
         'answer'   => 'Tak, zawsze dodaję wpis w Wikidata, gdy dodaję artykuł do Wikipedii. Mogę go także dodać, gdy twój temat nie nadaje się do Wikipedii.',
     ],
