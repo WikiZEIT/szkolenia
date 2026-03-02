@@ -19,6 +19,10 @@ $faq = [
         'answer'   => 'Aby dodać artykuł, który na pewno zostanie w Wikipedii, dobrze jest założyć najpierw konto (chociaż nie jest to technicznie wymagane) oraz zacząć w swoim brudnopisie. Gdy artykuł jest gotowy należy poprosić twojego przewodnika o sprawdzenie i ewentualną publikacje (czyli przeniesnie do przestrzni główej). Dodając artykuł należy pamiętać o naważniejszych zasadach: <a href="https://pl.wikipedia.org/wiki/WP:NPOV">neutralnym punkcie widzenia</a> , <a href="https://pl.wikipedia.org/wiki/WP:ENCY">encyklopedyczności tematu</a>, <a href="https://pl.wikipedia.org/wiki/WP:WER">wiarygodnych źródłach</a> oraz <a href="https://pl.wikipedia.org/wiki/WP:PA">poszanowaniu praw autorskich</a>.'
     ],
     [
+        'question' => 'Czy płatne edytowanie Wikipedii jest dozwolone?',
+        'answer'   => "<p>Tak, pod warunkiem pełnego ujawnienia takich edycji na stronie użytkownika lub w opisie zmian. Jednak różne wersje językowe moga mieć różne wytyczne, ponieważ Wikipedia jest to projekt społeczny i zasady są wypracowywane przez społeczność. Jeśli chodzi o płatne edycje, Angielska Wikipedia jest bardziej restrykcyjna na temat ujawniania płatnych edycji.</p>\n<p>W polskiej Wikipedii, nie ma wypracowanej zasady dotyczącej płatnych edycji, ale mimo to warto dodać taką informację na swojej stronie profilowej. <a href=\"https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use/pl#paid-contrib-disclosure\">Ogólne wytyczne na temat Płatnych edycji</a> można znaleźć na stronie Wikimedia Foundation.</p>"
+    ],
+    [
         'question' => 'Ile trwa edycja artykułu na Wikipedii?',
         'answer'   => 'Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godziny. Krócej, gdy mam już przygotowany tekst i źródła. Wyszkuwanie i czytanie źródeł, może wydłużyć cały proces.',
     ],
