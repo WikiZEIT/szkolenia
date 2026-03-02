@@ -32,7 +32,7 @@ $faq = [
     ],
     [
         'question' => 'Czy wystawiasz fakturę VAT?',
-        'answer'   => 'Jeśli potrzebujesz faktury możemy podpisać umowę przez UseMe.'
+        'answer'   => 'Jeśli potrzebujesz faktury możemy podpisać umowę przez <a href="https://useme.com/pl/roles/contractor/jakub-t-jankiewicz,187663/">UseMe</a>.'
     ],
     [
         'question' => 'Czy możesz pomóc w dodaniu wpisu w Wikidanych (Wikidata)?',
