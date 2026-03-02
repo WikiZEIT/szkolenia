@@ -16,15 +16,15 @@ $result = $a + $b;
 $faq = [
     [
         'question' => 'Jak opublikować artykuł na Wikipedii?',
-        'answer' => 'Aby dodać artykuł, który na pewno zostanie w Wikipedii, dobrze jest założyć najpierw konto (chociaż nie jest to technicznie wymagane) oraz zacząć w swoim brudnopisie. Gdy artykuł jest gotowy należy poprosić twojego przewodnika o sprawdzenie i ewentualną publikacje (czyli przeniesnie do przestrzni główej). Dodając artykuł należy pamiętać o naważniejszych zasadach: <a href="https://pl.wikipedia.org/wiki/WP:NPOV">neutralnym punkcie widzenia</a> , <a href="https://pl.wikipedia.org/wiki/WP:ENCY">encyklopedyczności tematu</a>, <a href="https://pl.wikipedia.org/wiki/WP:WER">wiarygodnych źródłach</a> oraz <a href="https://pl.wikipedia.org/wiki/WP:PA">poszanowaniu praw autorskich</a>.'
+        'answer'   => 'Aby dodać artykuł, który na pewno zostanie w Wikipedii, dobrze jest założyć najpierw konto (chociaż nie jest to technicznie wymagane) oraz zacząć w swoim brudnopisie. Gdy artykuł jest gotowy należy poprosić twojego przewodnika o sprawdzenie i ewentualną publikacje (czyli przeniesnie do przestrzni główej). Dodając artykuł należy pamiętać o naważniejszych zasadach: <a href="https://pl.wikipedia.org/wiki/WP:NPOV">neutralnym punkcie widzenia</a> , <a href="https://pl.wikipedia.org/wiki/WP:ENCY">encyklopedyczności tematu</a>, <a href="https://pl.wikipedia.org/wiki/WP:WER">wiarygodnych źródłach</a> oraz <a href="https://pl.wikipedia.org/wiki/WP:PA">poszanowaniu praw autorskich</a>.'
     ],
     [
         'question' => 'Ile trwa edycja artykułu na Wikipedii?',
-        'answer'   => 'Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godziny. Krócej gdy mam już przygotowany tekst i źródła. Wyszkuwanie i czytanie źródeł może wydłużyć cały proces.',
+        'answer'   => 'Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godziny. Krócej, gdy mam już przygotowany tekst i źródła. Wyszkuwanie i czytanie źródeł, może wydłużyć cały proces.',
     ],
     [
         'question' => 'Jaki jest maksymalny koszt przygotowania jednego artykułu?',
-        'answer' => 'W przypadku <strong>standardowych zleceń</strong> (edycja artykułu do ok. 200 słów), stosuję <strong>górny limit 1000 zł netto</strong> za pojedynczą stronę. W trudnych przypadkach dostaniesz indywidualną wycenę.'
+        'answer'   => 'W przypadku <strong>standardowych zleceń</strong> (edycja artykułu do ok. 200 słów), stosuję <strong>górny limit 1000 zł netto</strong> za pojedynczą stronę. W trudnych przypadkach dostaniesz indywidualną wycenę.'
     ],
     [
         'question' => 'Czy edytujesz tylko w języku Polskim?',
