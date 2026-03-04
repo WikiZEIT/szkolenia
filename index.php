@@ -44,7 +44,7 @@ $faq = [
     ],
     [
         'question' => 'Czy możesz pomóc w dodaniu wpisu w Wikidanych (Wikidata)?',
-        'answer'   => 'Tak, zawsze dodaję wpis w Wikidata, gdy dodaję artykuł do Wikipedii. Mogę go także dodać, gdy twój temat nie nadaje się do Wikipedii.',
+        'answer'   => 'Tak, zawsze dodaję wpis w Wikidata, gdy dodaję artykuł do Wikipedii. Mogę go także dodać, gdy twój temat nie nadaje się do Wikipedii lub gdy twój artykuł jeszcze go nie ma.',
     ],
     [
         'question' => 'Jak uzyskać wpis w Google Knowledge Graph?',
