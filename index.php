@@ -49,6 +49,10 @@ $faq = [
     [
         'question' => 'Jak uzyskać wpis w Google Knowledge Graph?',
         'answer'   => "<p>Główne czynniki wpływające na pojawienie się w Grafie Wiedzy Google to:</p>\n<ul><li>Wpis w Wikipedii</li>\n<li>Wpis w Wikidata</li>\n<li>Duży kanał na YouTube</li>\n<li>Optymalizacja techniczna oraz <a href=\"https://schema.org/\">Schema.org</a></li>\n<li>Publikacje w mediach</li>\n<li>Obecność w tematycznych bazach danych</li></ul>"
+    ],
+    [
+        'question' => 'Czy są jakieś darmowe szkolenia z Wikipedii?',
+        'answer'   => "Tak, stowarszyenie <a href=\"https://wikimedia.pl/\">Wikimedia Polska</a> organizuje darmowe szkolenia z edycji Wikipedii, w ramach <a href=\"https://wikiszkola.pl/szkolenia/\">Wikiszkoły</a>. Jedym z projektów jest <a href=\"https://wikiszkola.pl/wikiteka/\">Wikiteka</a>, w której biorę udział jako wolontnariusz."
     ]
 ];
 
