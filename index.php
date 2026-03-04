@@ -52,7 +52,7 @@ $faq = [
     ],
     [
         'question' => 'Czy są jakieś darmowe szkolenia z Wikipedii?',
-        'answer'   => "Tak, stowarszyenie <a href=\"https://wikimedia.pl/\">Wikimedia Polska</a> organizuje darmowe szkolenia z edycji Wikipedii, w ramach <a href=\"https://wikiszkola.pl/szkolenia/\">Wikiszkoły</a>. Jedym z projektów jest <a href=\"https://wikiszkola.pl/wikiteka/\">Wikiteka</a>, w której biorę udział jako wolontnariusz."
+        'answer'   => "Tak, stowarszyenie <a href=\"https://wikimedia.pl/\">Wikimedia Polska</a> organizuje darmowe szkolenia z edycji Wikipedii, w ramach <a href=\"https://wikiszkola.pl/szkolenia/\">Wikiszkoły</a>. Jedym z projektów jest <a href=\"https://wikiszkola.pl/wikiteka/\">Wikiteka</a>, w której biorę udział jako wolontnariusz. Wikiteka to projekt przenaczony głównie dla bibliotekarzy/bibliotekarek oraz nauczycielek/nauczycieli. Wikimedia Polska organizuje szkolenia także dla studentów i uczniów."
     ]
 ];
 
