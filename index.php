@@ -2208,7 +2208,7 @@ a:not(.btn):hover {
                                           <strong>W Technologii:</strong> Jestem doświadczonym programistą i twórcą projektów Open Source (m.in. <a href="https://terminal.jcubic.pl">jQuery Terminal</a>, <a href="https://github.com/jcubic/sysend">Sysend</a>, <a href="https://github.com/jcubic/wayne">Wayne</a>, czy <a href="https://lips.js.org">LIPS Scheme</a>). Moje techniczne podejście pozwala mi rozumieć Wikipedię nie tylko jako tekst, ale jako system danych strukturalnych (Wikidata), który bezpośrednio wpływa na nowoczesne SEO i Graf Wiedzy Google.
                                         </li>
                                         <li class="about-list-item">
-                                            <strong>W Edukacji:</strong> Od lat tłumaczę zawiłe aspekty techniczne w sposób przystępny dla biznesu. Moim celem jest edukowanie profesjonalistów z branży PR i SEO, aby ich obecność w największej encyklopedii świata była etyczna, trwała i technicznie poprawna.
+                                            <strong>W Edukacji:</strong> Od lat tłumaczę zawiłe aspekty techniczne w przystępny sposób. Moim celem jest edukowanie profesjonalistów z branży PR i SEO, aby ich obecność w największej encyklopedii świata była etyczna, trwała i technicznie poprawna.
                                         </li>
                                     </ul>
                                 </div>
