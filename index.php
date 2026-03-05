@@ -2264,6 +2264,7 @@ a:not(.btn):hover {
                           <div class="footer-links">
                               <ul>
                                   <li><a class="footer-link" href="/">Głównie JavaScript</a></li>
+                                  <li><a class="footer-link" href="/wikizeit">WikiZEIT</a></li>
                                   <li><a class="footer-link" href="https://github.com/jcubic/wikipedia">kod źródłowy</a></li>
                               </ul>
                           </div>
