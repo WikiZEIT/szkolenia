@@ -89,7 +89,10 @@ $graph = [
             'description' => 'Profesjonalne szkolenia z edycji Wikipedii i danych strukturalnych prowadzone przez Jakuba T. Janiewicza.',
             'breadcrumb' => ['@id' => $breadcrumb_id],
             'mainEntity' => ['@id' => $course_id], // Wskazuje, że kurs jest głównym tematem strony
-            'author' => ['@id' => $person_id]
+            'author' => ['@id' => $person_id],
+            'asmeAs': [
+                'https://github.com/WikiZEIT/szkolenia'
+            ]
         ],
 
         [
@@ -2309,7 +2312,7 @@ a:not(.btn):hover {
                               <ul>
                                   <li><a class="footer-link" href="/">Głównie JavaScript</a></li>
                                   <li><a class="footer-link" href="/wikizeit">WikiZEIT</a></li>
-                                  <li><a class="footer-link" href="https://github.com/jcubic/wikipedia">kod źródłowy</a></li>
+                                  <li><a class="footer-link" href="https://github.com/WikiZEIT/szkolenia">kod źródłowy</a></li>
                               </ul>
                           </div>
                         </div>
