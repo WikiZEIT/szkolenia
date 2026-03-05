@@ -73,10 +73,54 @@ $offer_catalog = [
 
 $person['hasOfferCatalog'] = $offer_catalog;
 
+$page_id = BASE_URL;
+$breadcrumb_id = BASE_URL . '#breadcrumb';
+
 $graph = [
     '@context' => 'https://schema.org',
     '@graph' => [
         $person,
+
+        [
+            '@type' => 'WebPage',
+            '@id' => $page_id,
+            'url' => BASE_URL,
+            'name' => 'Komercyjne szkolenia z Wikipedii i SEO - WikiZeit',
+            'description' => 'Profesjonalne szkolenia z edycji Wikipedii i danych strukturalnych prowadzone przez Jakuba T. Janiewicza.',
+            'breadcrumb' => ['@id' => $breadcrumb_id],
+            'mainEntity' => ['@id' => $course_id], // Wskazuje, że kurs jest głównym tematem strony
+            'author' => ['@id' => $person_id]
+        ],
+
+        [
+            '@type' => 'BreadcrumbList',
+            '@id' => $breadcrumb_id,
+            'itemListElement' => [
+                [
+                    '@type' => 'ListItem',
+                    'position' => 1,
+                    'item' => [
+                        '@id' => 'https://jcubic.pl',
+                        'name' => 'Głównie JavaScript'
+                    ]
+                ],
+                [
+                    '@type' => 'ListItem',
+                    'position' => 2,
+                    'item' => [
+                        '@id' => 'https://jcubic.pl/wikizeit/',
+                        'name' => 'WikiZeit'
+                    ]
+                ],
+                [
+                    '@type' => 'ListItem',
+                    'position' => 3,
+                    'item' => [
+                        'name' => 'Szkolenia'
+                    ]
+                ]
+            ]
+        ],
 
         [
             '@type' => 'Offer',
