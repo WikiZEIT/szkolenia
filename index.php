@@ -90,7 +90,7 @@ $graph = [
             'breadcrumb' => ['@id' => $breadcrumb_id],
             'mainEntity' => ['@id' => $course_id], // Wskazuje, że kurs jest głównym tematem strony
             'author' => ['@id' => $person_id],
-            'asmeAs': [
+            'asmeAs' => [
                 'https://github.com/WikiZEIT/szkolenia'
             ]
         ],
