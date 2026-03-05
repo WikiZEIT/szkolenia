@@ -1820,7 +1820,7 @@ a:not(.btn):hover {
                                     <span class="material-symbols-outlined service-icon">auto_graph</span>
                                     <div class="service-content">
                                         <h3 class="service-title">Szkolenia Wikipedia &amp; SEO</h3>
-                                        <p class="service-description">Szkolenia dla agencji SEO oraz działów PR i marketingu. Nauczę Twój zespół, jak samodzielnie oceniać encyklopedyczność, poruszać się po strukturze technicznej Wikipedii i edytować zgodnie z rygorystycznymi zasadami społeczności, by budować trwałą obecność marki bez ryzyka blokady i wykorzystywać powiązane projekty do budowania grafu wiedzy marki w Google.</p>
+                                        <p class="service-description">Profesjonalne i komercyjne Szkolenia dla agencji SEO oraz działów PR i marketingu. Nauczę Twój zespół, jak samodzielnie oceniać encyklopedyczność, poruszać się po strukturze technicznej Wikipedii i edytować zgodnie z rygorystycznymi zasadami społeczności, by budować trwałą obecność marki bez ryzyka blokady i wykorzystywać powiązane projekty do budowania grafu wiedzy marki w Google.</p>
                                     </div>
                                 </div>
                             </div>
