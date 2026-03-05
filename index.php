@@ -6,6 +6,7 @@ define('ALLEGRO_TOKEN_FILE', __DIR__ . '/allegro_tokens.json');
 define('ALLEGRO_CLIENT_ID', '...');
 define('ALLEGRO_CLIENT_SECRET', '...');
 define('ALLEGRO_ENABLED', false);
+define('BASE_URL', 'https://jcubic.pl/wikizeit/szkolenia/');
 
 $message_sent = false;
 $error_message = '';
@@ -58,8 +59,8 @@ $faq = [
 
 $person = json_decode(file_get_contents('person.json'), true);
 $person_id = 'https://jakub.jankiewicz.org';
-$course_id = 'https://jcubic.pl/wikipedia/#szkolenie';
-$consultation_id = 'https://jcubic.pl/wikipedia/#konsultacje';
+$course_id = BASE_URL . '#szkolenie';
+$consultation_id = BASE_URL . '#konsultacje';
 
 $offer_catalog = [
     '@type' => 'OfferCatalog',
@@ -160,7 +161,7 @@ if ($is_request) {
     } else if (filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($user_message)) {
         $to = 'jcubic@jcubic.pl';
         $subject = $_POST['subject'];
-        $body = "Wiadomość ze strony https://jcubic.pl/wikipedia/:\n\n";
+        $body = "Wiadomość ze strony " . BASE_URL . ":\n\n";
         $body .= "From: " . $email . "\n";
         $body .= "Message:\n" . $user_message;
 
@@ -450,18 +451,18 @@ if (isset($_GET['auth']) && ALLEGRO_ENABLED) {
         })();
     </script>
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://jcubic.pl/wikipedia/" />
+    <meta property="og:url" content="<?= BASE_URL ?>" />
     <meta property="og:type" content="website">
     <meta property="og:title" content="Wikipedia Konsultacje i Szkolenia" />
     <meta property="og:description" content="Szkolenia i konsultacje z zakresu Wikipedii. Naucz się tworzyć trwałe artykuły, dbać o SEO i poruszać w świecie Wikimedia Commons. Profesjonalne wsparcie dla firm." />
-    <meta property="og:image" content="https://jcubic.pl/wikipedia/social-card.png" />
+    <meta property="og:image" content="<?= BASE_URL ?>social-card.png" />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://jcubic.pl/wikipedia/" />
+    <meta property="twitter:url" content="<?= BASE_URL ?>" />
     <meta name="twitter:title" content="Wikipedia Konsultacje i Szkolenia" />
     <meta name="twitter:description" content="Szkolenia i konsultacje z zakresu Wikipedii. Naucz się tworzyć trwałe artykuły, dbać o SEO i poruszać w świecie Wikimedia Commons. Profesjonalne wsparcie dla firm." />
-    <meta name="twitter:image" content="https://jcubic.pl/wikipedia/social-card.png" />
+    <meta name="twitter:image" content="<?= BASE_URL ?>social-card.png" />
 
     <!-- Meta Tags Generated via https://www.opengraph.io -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -1743,7 +1744,7 @@ a:not(.btn):hover {
     }
 }
     </style>
-    <link rel="canonical" href="https://jcubic.pl/wikipedia/" />
+    <link rel="canonical" href="<?= BASE_URL ?>" />
     <script type="application/ld+json">
     <?php
     echo json_encode($graph, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
