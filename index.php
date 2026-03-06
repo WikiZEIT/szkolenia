@@ -91,10 +91,6 @@ $graph = [
             'breadcrumb' => ['@id' => $breadcrumb_id],
             'mainEntity' => ['@id' => $course_id],
             'author' => ['@id' => $person_id],
-            'asmeAs' => [
-                'https://github.com/WikiZEIT/szkolenia'
-            ],
-            'isPartOf' => [ '@id' => $wikizeit_id ],
             'mainEntity' => [
                 [ '@id' => $course_id ],
                 [ '@id' => $service_id ]
@@ -109,8 +105,7 @@ $graph = [
             'url' => $wikizeit_id,
             'logo' => $wikizeit_id . 'img/logo.svg',
             'description' => 'Projekt edukacyjny poświęcony etycznemu SEO, danym strukturalnym i profesjonalnej edycji Wikipedii.',
-            'founder' => ['@id' => $person_id],
-            'isPartOf' => [ '@id' => $wikizeit_id . '#webiste' ],
+            'founder' => ['@id' => $person_id]
         ],
 
         [
@@ -128,9 +123,7 @@ $graph = [
             'name' => 'Szkolenie Wikipedia+SEO - Solo',
             'price' => '999.00',
             'priceCurrency' => 'PLN',
-            'partOf' => [
-                '@id' => $course_id
-            ]
+            'itemOffered' => ['@id' => $course_id]
         ],
 
         [
@@ -165,7 +158,6 @@ $graph = [
             '@id' => $service_id,
             'name' => 'Konsultacje Wikipedia SEO',
             'description' => 'Indywidualne konsultacje oraz audyt encyklopedyczności dla firm i marek osobistych.',
-            'author' => [ '@id' => $person_id ],
             'provider' => [ '@id' => $wikizeit_id ]
         ],
 
@@ -185,7 +177,7 @@ $graph = [
                     '@type' => 'ListItem',
                     'position' => 2,
                     'item' => [
-                        '@id' => 'https://jcubic.pl/wikizeit/#webpag',
+                        '@id' => $wikizeit_id . '#webpage',
                         'name' => 'WikiZeit'
                     ]
                 ],
