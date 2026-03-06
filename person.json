@@ -3,24 +3,8 @@
   "url": "https://jakub.jankiewicz.org/pl/",
   "@id": "https://jakub.jankiewicz.org",
   "name": "Jakub T. Jankiewicz",
-  "givenName": "Jakub",
-  "familyName": "Jankiewicz",
-  "additionalName": "T.",
-  "alternateName": "jcubic",
   "image": "https://live.staticflickr.com/65535/50132910231_73d867794f_k_d.jpg",
-  "gender": "https://schema.org/Male",
   "jobTitle": "Senior Front-End Developer",
-  "mainEntityOfPage": [
-    {
-      "@id": "https://www.wikidata.org/wiki/Q137396574"
-    },
-    {
-      "@id": "https://www.wikidata.org/wiki/Q108196498"
-    },
-    {
-      "@id": "https://www.wikidata.org/wiki/Q124321922"
-    }
-  ],
   "sameAs": [
     "https://twitter.com/jcubic",
     "https://pinterest.com/jcubic/",
@@ -45,50 +29,5 @@
     "https://commons.wikimedia.org/wiki/User:Jcubic",
     "https://www.wikidata.org/wiki/Q113688230",
     "https://www.youtube.com/@jcubic"
-  ],
-  "knowsAbout": [
-    "Front-End",
-    "JavaScript",
-    "NodeJS",
-    "Python",
-    "R",
-    "PHP",
-    "TypeScript",
-    "React",
-    "ReactNative",
-    "Redux",
-    "Prisma",
-    "Eleventy",
-    "Bash",
-    "SVG",
-    "CSS",
-    "Shiny",
-    "Jekyll",
-    "GIT",
-    "GNU Emacs",
-    "GNU/Linux",
-    "Inkscape",
-    "SQL",
-    "SQLite",
-    "MySQL",
-    "SEO",
-    "Graphic Design",
-    "Security",
-    "lisp",
-    "scheme",
-    "programming",
-    "software development",
-    "Web Development",
-    "Photography",
-    "Wikipedia SEO",
-    "Wikidata",
-    "Entity SEO",
-    "Knowledge Graph",
-    "Open Source Development"
-  ],
-  "knowsLanguage": [
-    "en-US",
-    "en-GB",
-    "pl-PL"
   ]
 }
