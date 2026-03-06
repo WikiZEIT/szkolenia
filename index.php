@@ -17,7 +17,7 @@ $result = $a + $b;
 $faq = [
     [
         'question' => 'Jak opublikować artykuł na Wikipedii?',
-        'answer'   => 'Aby dodać artykuł, który na pewno zostanie w Wikipedii, dobrze jest założyć najpierw konto (chociaż nie jest to technicznie wymagane) oraz zacząć w swoim brudnopisie. Gdy artykuł jest gotowy należy poprosić twojego przewodnika o sprawdzenie i ewentualną publikacje (czyli przeniesnie do przestrzni główej). Dodając artykuł należy pamiętać o naważniejszych zasadach: <a href="https://pl.wikipedia.org/wiki/WP:NPOV">neutralnym punkcie widzenia</a> , <a href="https://pl.wikipedia.org/wiki/WP:ENCY">encyklopedyczności tematu</a>, <a href="https://pl.wikipedia.org/wiki/WP:WER">wiarygodnych źródłach</a> oraz <a href="https://pl.wikipedia.org/wiki/WP:PA">poszanowaniu praw autorskich</a>.'
+        'answer'   => "<p>Aby dodać artykuł, który na pewno zostanie w Wikipedii, dobrze jest założyć najpierw konto (chociaż nie jest to technicznie wymagane) oraz zacząć w swoim brudnopisie. Gdy artykuł jest gotowy należy poprosić twojego przewodnika o sprawdzenie i ewentualną publikacje (czyli przeniesnie do przestrzni główej).<p>\n<p>Dodając artykuł należy pamiętać o naważniejszych zasadach: <a href=\"https://pl.wikipedia.org/wiki/WP:NPOV\">neutralnym punkcie widzenia</a> , <a href=\"https://pl.wikipedia.org/wiki/WP:ENCY\">encyklopedyczności tematu</a>, <a href=\"https://pl.wikipedia.org/wiki/WP:WER\">wiarygodnych źródłach</a> oraz <a href=\"https://pl.wikipedia.org/wiki/WP:PA\">poszanowaniu praw autorskich</a>.</p>"
     ],
     [
         'question' => 'Czy płatne edytowanie Wikipedii jest dozwolone?',
@@ -25,27 +25,27 @@ $faq = [
     ],
     [
         'question' => 'Ile trwa edycja artykułu na Wikipedii?',
-        'answer'   => 'Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godziny. Krócej, gdy mam już przygotowany tekst i źródła. Wyszkuwanie i czytanie źródeł, może wydłużyć cały proces.',
+        'answer'   => '<p>Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godziny. Krócej, gdy mam już przygotowany tekst i źródła. Wyszkuwanie i czytanie źródeł, może wydłużyć cały proces.</p>',
     ],
     [
         'question' => 'Jaki jest maksymalny koszt przygotowania jednego artykułu?',
-        'answer'   => 'W przypadku <strong>standardowych zleceń</strong> (edycja artykułu do ok. 200 słów), stosuję <strong>górny limit 1000 zł netto</strong> za pojedynczą stronę. W trudnych przypadkach dostaniesz indywidualną wycenę.'
+        'answer'   => '<p>W przypadku <strong>standardowych zleceń</strong> (edycja artykułu do ok. 200 słów), stosuję <strong>górny limit 1000 zł netto</strong> za pojedynczą stronę. W trudnych przypadkach dostaniesz indywidualną wycenę.</p>'
     ],
     [
         'question' => 'Czy edytujesz tylko w języku Polskim?',
-        'answer'   => 'Mogę pomóc także z edycją artykułów w języku Angielskim. Chociaż czas edycji może sie wydłużyć, w zależności od tematyki artykułu.',
+        'answer'   => '<p>Mogę pomóc także z edycją artykułów w języku Angielskim. Chociaż czas edycji może sie wydłużyć, w zależności od tematyki artykułu.</p>',
     ],
     [
         'question' => 'Czy wystawiasz fakturę VAT?',
-        'answer'   => 'Jeśli potrzebujesz faktury możemy podpisać umowę przez <a href="https://useme.com/pl/roles/contractor/jakub-t-jankiewicz,187663/">UseMe</a>.'
+        'answer'   => '<p>Jeśli potrzebujesz faktury możemy podpisać umowę przez <a href="https://useme.com/pl/roles/contractor/jakub-t-jankiewicz,187663/">UseMe</a>.</p>'
     ],
     [
         'question' => 'Czy uferujesz linki z Wikipedii?',
-        'answer'   => 'Nie mam tego w ofercie. Natomiast jeśli jesteś ekspertem SEO i szukasz linków z Wikipedii, możesz wziąć udział w moim szkoleniu, gdzie dowiesz się jak je dodawać samemu. Jest to jednorazowa inwestycja.'
+        'answer'   => '<p>Nie mam tego w ofercie. Natomiast jeśli jesteś ekspertem SEO i szukasz linków z Wikipedii, możesz wziąć udział w moim szkoleniu, gdzie dowiesz się jak je dodawać samemu. Jest to jednorazowa inwestycja.</p>'
     ],
     [
         'question' => 'Czy możesz pomóc w dodaniu wpisu w Wikidanych (Wikidata)?',
-        'answer'   => 'Tak, zawsze dodaję wpis w Wikidata, gdy dodaję artykuł do Wikipedii. Mogę go także dodać, gdy twój temat nie nadaje się do Wikipedii lub gdy twój artykuł jeszcze go nie ma.',
+        'answer'   => '<p>Tak, zawsze dodaję wpis w Wikidata, gdy dodaję artykuł do Wikipedii. Mogę go także dodać, gdy twój temat nie nadaje się do Wikipedii lub gdy twój artykuł jeszcze go nie ma.</p>',
     ],
     [
         'question' => 'Jak uzyskać wpis w Google Knowledge Graph?',
@@ -53,7 +53,7 @@ $faq = [
     ],
     [
         'question' => 'Czy są jakieś darmowe szkolenia z Wikipedii?',
-        'answer'   => "Tak, stowarszyenie <a href=\"https://wikimedia.pl/\">Wikimedia Polska</a> organizuje darmowe szkolenia z edycji Wikipedii, w ramach <a href=\"https://wikiszkola.pl/szkolenia/\">Wikiszkoły</a>. Jedym z projektów jest <a href=\"https://wikiszkola.pl/wikiteka/\">Wikiteka</a>, jest to projekt przenaczony głównie dla bibliotekarzy (bibliotekarek) oraz nauczycielek (nauczycieli). Wikimedia Polska organizuje szkolenia także dla studentów i uczniów. Szkolenia prowadzą wolontariusze nazwani Wikitrnerami."
+        'answer'   => "<p>Tak, stowarszyenie <a href=\"https://wikimedia.pl/\">Wikimedia Polska</a> organizuje darmowe szkolenia z edycji Wikipedii, w ramach <a href=\"https://wikiszkola.pl/szkolenia/\">Wikiszkoły</a>.</p>\n<p>Jedym z projektów jest <a href=\"https://wikiszkola.pl/wikiteka/\">Wikiteka</a>, jest to projekt przenaczony głównie dla bibliotekarzy (bibliotekarek) oraz nauczycielek (nauczycieli). Wikimedia Polska organizuje szkolenia także dla studentów i uczniów. Szkolenia prowadzą wolontariusze nazwani Wikitrnerami.</p>"
     ],
     [
         'question' => 'Kto w polsce organizuje szkolenia z Wikipedii?',
