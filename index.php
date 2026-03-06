@@ -73,14 +73,15 @@ $offer_catalog = [
 
 $person['hasOfferCatalog'] = $offer_catalog;
 
-$page_id = BASE_URL;
+$page_id = BASE_URL . "#webpage";
+$wikizeit_id = 'https://jcubic.pl/wikizeit/';
+$service_id = $wikizeit_id . '#service';
 $breadcrumb_id = BASE_URL . '#breadcrumb';
 
 $graph = [
     '@context' => 'https://schema.org',
     '@graph' => [
         $person,
-
         [
             '@type' => 'WebPage',
             '@id' => $page_id,
@@ -88,11 +89,84 @@ $graph = [
             'name' => 'Komercyjne szkolenia z Wikipedii i SEO - WikiZeit',
             'description' => 'Profesjonalne szkolenia z edycji Wikipedii i danych strukturalnych prowadzone przez Jakuba T. Janiewicza.',
             'breadcrumb' => ['@id' => $breadcrumb_id],
-            'mainEntity' => ['@id' => $course_id], // Wskazuje, że kurs jest głównym tematem strony
+            'mainEntity' => ['@id' => $course_id],
             'author' => ['@id' => $person_id],
             'asmeAs' => [
                 'https://github.com/WikiZEIT/szkolenia'
+            ],
+            'isPartOf' => [ '@id' => $wikizeit_id ],
+            'mainEntity' => [
+                [ '@id' => $course_id ],
+                [ '@id' => $service_id ]
             ]
+        ],
+
+        [
+            '@type' => 'EducationalOrganization',
+            '@id' => $wikizeit_id,
+            'name' => 'WikiZeit',
+            'alternateName' => 'Projekt WikiZeit',
+            'url' => $wikizeit_id,
+            'logo' => $wikizeit_id . 'img/logo.svg',
+            'description' => 'Projekt edukacyjny poświęcony etycznemu SEO, danym strukturalnym i profesjonalnej edycji Wikipedii.',
+            'founder' => ['@id' => $person_id],
+            'isPartOf' => [ '@id' => $wikizeit_id . '#webiste' ],
+        ],
+
+        [
+            '@type' => 'Offer',
+            '@id' => $consultation_id,
+            'price' => '250.00',
+            'priceCurrency' => 'PLN',
+            'itemOffered' => [
+                '@id' => $service_id
+            ]
+        ],
+
+        [
+            '@type' => 'Offer',
+            'name' => 'Szkolenie Wikipedia+SEO - Solo',
+            'price' => '999.00',
+            'priceCurrency' => 'PLN',
+            'partOf' => [
+                '@id' => $course_id
+            ]
+        ],
+
+        [
+            '@type' => 'Offer',
+            'name' => 'Szkolenie Wikipedia+SEO - Team',
+            'priceSpecification' => [
+                '@type' => 'UnitPriceSpecification',
+                'priceCurrency' => 'PLN',
+                'minPrice' => '499.00',
+                'maxPrice' => '599.00',
+                'unitText' => 'osoba'
+            ],
+            'description' => 'Cena przy zakupie pakietu grupowego (od 3 do 10 osób).',
+            'itemOffered' => ['@id' => $course_id]
+        ],
+
+        [
+            '@type' => 'Course',
+            '@id' => $course_id,
+            'name' => 'Szkolenie Wikipedia+SEO i nie tylko',
+            'description' => 'Kompleksowe szkolenie z edycji Wikipedii i danych strukturalnych. Pakiet obejmuje:\n' .
+                           '- Imienny certyfikat ukończenia szkolenia\n' .
+                           '- Stały dostęp do konsultacji w cenie 190 zł netto/h\n' .
+                           '- Opiekę oficjalnego Wiki-Przewodnika wewnątrz Wikipedii\n' .
+                           '- Konfigurację strony z odnośnikami do narzędzi.',
+            'author' => [ '@id' => $person_id ],
+            'provider' => [ '@id' => $wikizeit_id ]
+        ],
+
+        [
+            '@type' => 'Service',
+            '@id' => $service_id,
+            'name' => 'Konsultacje Wikipedia SEO',
+            'description' => 'Indywidualne konsultacje oraz audyt encyklopedyczności dla firm i marek osobistych.',
+            'author' => [ '@id' => $person_id ],
+            'provider' => [ '@id' => $wikizeit_id ]
         ],
 
         [
@@ -111,7 +185,7 @@ $graph = [
                     '@type' => 'ListItem',
                     'position' => 2,
                     'item' => [
-                        '@id' => 'https://jcubic.pl/wikizeit/',
+                        '@id' => 'https://jcubic.pl/wikizeit/#webpag',
                         'name' => 'WikiZeit'
                     ]
                 ],
@@ -119,63 +193,11 @@ $graph = [
                     '@type' => 'ListItem',
                     'position' => 3,
                     'item' => [
-                        'name' => 'Szkolenia'
+                        '@id' => $page_id,
+                        'name' => 'Szkolenia i Konsultacje'
                     ]
                 ]
             ]
-        ],
-
-        [
-            '@type' => 'Offer',
-            '@id' => $consultation_id,
-            'price' => '250.00',
-            'priceCurrency' => 'PLN',
-            'itemOffered' => [
-                '@type' => 'Service',
-                '@id' => 'https://jcubic.pl',
-                'name' => 'Konsultacje Wikipedia SEO',
-                'description' => 'Indywidualne konsultacje oraz audyt encyklopedyczności dla firm i marek osobistych.',
-                'provider' => ['@id' => $person_id]
-            ]
-        ],
-
-        [
-            '@type' => 'Offer',
-            'name' => 'Szkolenie Wikipedia+SEO - Solo',
-            'price' => '999.00',
-            'priceCurrency' => 'PLN',
-            'itemOffered' => [
-                '@id' => $course_id
-            ]
-        ],
-
-        [
-            '@type' => 'Offer',
-            'name' => 'Szkolenie Wikipedia+SEO - Team',
-            'priceSpecification' => [
-                '@type' => 'UnitPriceSpecification',
-                'priceCurrency' => 'PLN',
-                'minPrice' => '499.00',
-                'maxPrice' => '599.00',
-                'unitText' => 'osoba'
-            ],
-            'description' => 'Cena przy zakupie pakietu grupowego (od 3 do 10 osób).',
-            'itemOffered' => [
-                '@id' => $course_id
-            ]
-        ],
-
-        [
-            '@type' => 'Course',
-            '@id' => $course_id,
-            'name' => 'Szkolenie Wikipedia+SEO i nie tylko',
-            'description' => 'Kompleksowe szkolenie z edycji Wikipedii i danych strukturalnych. Pakiet obejmuje:\n' .
-                           '- Imienny certyfikat ukończenia szkolenia\n' .
-                           '- Stały dostęp do konsultacji w cenie 190 zł netto/h\n' .
-                           '- Opiekę oficjalnego Wiki-Przewodnika wewnątrz Wikipedii\n' .
-                           '- Konfigurację strony z odnośnikami do narzędzi.',
-            'author' => ['@id' => $person_id],
-            'provider' => ['@id' => $person_id]
         ],
 
         [
