@@ -172,26 +172,20 @@ $graph = [
                 [
                     '@type' => 'ListItem',
                     'position' => 1,
-                    'item' => [
-                        '@id' => 'https://jcubic.pl',
-                        'name' => 'Głównie JavaScript'
-                    ]
+                    'item' => 'https://jcubic.pl',
+                    'name' => 'Głównie JavaScript'
                 ],
                 [
                     '@type' => 'ListItem',
                     'position' => 2,
-                    'item' => [
-                        '@id' => $wikizeit_id . '#webpage',
-                        'name' => 'WikiZeit'
-                    ]
+                    'item' => $wikizeit_id . '#webpage',
+                    'name' => 'WikiZeit'
                 ],
                 [
                     '@type' => 'ListItem',
                     'position' => 3,
-                    'item' => [
-                        '@id' => $page_id,
-                        'name' => 'Szkolenia i Konsultacje'
-                    ]
+                    'item' => $page_id,
+                    'name' => 'Szkolenia i Konsultacje'
                 ]
             ]
         ],
