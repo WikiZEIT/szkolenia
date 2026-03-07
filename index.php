@@ -2463,7 +2463,7 @@ a:not(.btn):hover {
             }
         })();
     </script>
-    <script defer src="https://umami.jcubic.pl/script.js" data-website-id="81f34cff-605f-411d-833d-ba9ffa86cdbd"></script>
+    <script defer src="https://umami.jcubic.pl/script.js" data-website-id="c716ef1c-b60b-455c-8279-58996a09a8a6"></script>
 </body>
 </html>
 <?php } ?>
