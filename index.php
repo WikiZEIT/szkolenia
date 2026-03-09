@@ -108,7 +108,14 @@ $graph = [
             'url' => $wikizeit_id,
             'logo' => $wikizeit_id . 'img/logo.svg',
             'description' => 'Projekt edukacyjny poświęcony etycznemu SEO, danym strukturalnym i profesjonalnej edycji Wikipedii.',
-            'founder' => ['@id' => $person_id]
+            'founder' => ['@id' => $person_id],
+            'sameAs' => [
+                'https://www.wikidata.org/wiki/Q138621958',
+                'https://www.linkedin.com/company/wikizeit/',
+                'https://commons.wikimedia.org/wiki/Category:WikiZEIT',
+                'https://www.youtube.com/@WikiZEIT',
+                'https://github.com/WikiZEIT'
+            ]
         ],
 
         [
