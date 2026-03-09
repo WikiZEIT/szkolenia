@@ -92,7 +92,6 @@ $graph = [
             'url' => BASE_URL,
             'name' => 'Komercyjne szkolenia z Wikipedii i SEO - WikiZeit',
             'description' => 'Profesjonalne szkolenia z edycji Wikipedii i danych strukturalnych prowadzone przez Jakuba T. Janiewicza.',
-            'breadcrumb' => ['@id' => $breadcrumb_id],
             'mainEntity' => ['@id' => $course_id],
             'author' => ['@id' => $person_id],
             'mainEntity' => [
