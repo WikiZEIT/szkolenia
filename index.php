@@ -1877,8 +1877,8 @@ a:not(.btn):hover {
                                 <div class="service-card">
                                     <span class="material-symbols-outlined service-icon">verified_user</span>
                                     <div class="service-content">
-                                        <h3 class="service-title">Etyczne Edycje (COI)</h3>
-                                        <p class="service-description">Tworzenie i aktualizacja haseł zgodnie z wymogami Fundacji Wikimedia (płatny wkład). Zarządzanie reputacją (ORM) oparte na faktach, neutralnym punkcie widzenia, oraz wiarygodnych źródłach.</p>
+                                        <h3 class="service-title">Płatna Edycja i Publikacja</h3>
+                                        <p class="service-description">Kompleksowe opracowanie, edycja oraz publikacja haseł w Wikipedii. Jako redaktor oferuję pełną implementację treści zgodnie z wymogami Wikipedii. Zapewniam rzetelne zarządzanie wizerunkiem w oparciu o fakty, neutralny punkt widzenia (NPOV) oraz weryfikowalne źródła (WER).</p>
                                     </div>
                                 </div>
 
