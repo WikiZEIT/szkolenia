@@ -1878,7 +1878,7 @@ a:not(.btn):hover {
                                     <span class="material-symbols-outlined service-icon">verified_user</span>
                                     <div class="service-content">
                                         <h3 class="service-title">Płatna Edycja i Publikacja</h3>
-                                        <p class="service-description">Kompleksowe opracowanie, edycja oraz publikacja haseł w Wikipedii. Jako redaktor oferuję pełną implementację treści zgodnie z wymogami Wikipedii. Zapewniam rzetelne zarządzanie wizerunkiem w oparciu o fakty, neutralny punkt widzenia (NPOV) oraz weryfikowalne źródła (WER).</p>
+                                        <p class="service-description">Profesjonalne opracowanie i techniczne wdrożenie treści do Wikipedii. Jako redaktor oferuję pełną implementację treści zgodnie z wymogami Wikipedii. Zapewniam rzetelne zarządzanie wizerunkiem w oparciu o fakty, neutralny punkt widzenia (NPOV) oraz weryfikowalne źródła (WER).</p>
                                     </div>
                                 </div>
 
