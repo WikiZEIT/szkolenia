@@ -21,8 +21,46 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
+      - name: PHP environment info
+        run: |
+          echo "=== PHP version ==="
+          php --version
+          echo "=== PHP binary ==="
+          which php
+          echo "=== PHP ini ==="
+          php --ini
+          echo "=== display_errors ==="
+          php -r "echo 'display_errors: ' . ini_get('display_errors') . PHP_EOL;"
+          echo "=== error_reporting ==="
+          php -r "echo 'error_reporting: ' . ini_get('error_reporting') . PHP_EOL;"
+
+      - name: Verify PHP check catches errors (sanity check)
+        run: |
+          echo '<?php syntax error here !!!' > /tmp/test-bad.php
+          php -S localhost:9875 /tmp/test-bad.php > /tmp/sanity.log 2>&1 &
+          sleep 2
+          CODE=$(curl -s -o /tmp/sanity-response.html -w "%{http_code}" http://localhost:9875/)
+          kill %1 2>/dev/null || true
+          echo "Sanity check HTTP code for known-bad PHP: $CODE"
+          cat /tmp/sanity.log
+          if [ "$CODE" = "200" ]; then
+            echo "::warning::PHP built-in server returns 200 even for broken scripts on this runner — HTTP code check is unreliable"
+          else
+            echo "HTTP code check works correctly on this runner (got $CODE)"
+          fi
+          if grep -qiE 'Fatal error:|Parse error:|syntax error' /tmp/sanity-response.html /tmp/sanity.log; then
+            echo "Log/response error check works correctly on this runner"
+          else
+            echo "::warning::PHP errors do not appear in response or log on this runner"
+            echo "--- sanity log ---"
+            cat /tmp/sanity.log
+            echo "--- sanity response ---"
+            cat /tmp/sanity-response.html
+          fi
+
       - name: Check PHP
         run: |
+          php -l index.php || { echo "::error::PHP syntax error in index.php"; exit 1; }
           php -S localhost:9876 index.php > /tmp/php-server.log 2>&1 &
           PHP_PID=$!
           sleep 2
@@ -39,6 +77,8 @@ jobs:
             exit 1
           fi
           echo "PHP check passed (HTTP $HTTP_CODE)"
+          echo "--- server log ---"
+          cat /tmp/php-server.log
 
   deploy:
     runs-on: ubuntu-latest
