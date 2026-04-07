@@ -2,7 +2,7 @@
 /* Copyright (c) 2026 Jakub T. Jankiewicz
  * All Rights Reserved
  */
-define('ALLEGRO_TOKEN_FILE', __DIR__ . '/allegro_tokens.json');
+\\define('ALLEGRO_TOKEN_FILE', __DIR__ . '/allegro_tokens.json');
 define('ALLEGRO_CLIENT_ID', '...');
 define('ALLEGRO_CLIENT_SECRET', '...');
 define('ALLEGRO_ENABLED', false);

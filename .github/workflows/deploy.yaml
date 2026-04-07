@@ -14,8 +14,35 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Check PHP
+        run: |
+          php -S localhost:9876 index.php > /tmp/php-server.log 2>&1 &
+          PHP_PID=$!
+          sleep 2
+          HTTP_CODE=$(curl -s -o /tmp/php-response.html -w "%{http_code}" http://localhost:9876/)
+          kill $PHP_PID 2>/dev/null || true
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "::error::PHP server returned HTTP $HTTP_CODE"
+            cat /tmp/php-server.log
+            exit 1
+          fi
+          if grep -qiE 'Fatal error:|Parse error:' /tmp/php-response.html /tmp/php-server.log; then
+            echo "::error::PHP errors found:"
+            grep -hiE 'Fatal error:|Parse error:' /tmp/php-response.html /tmp/php-server.log
+            exit 1
+          fi
+          echo "PHP check passed (HTTP $HTTP_CODE)"
+
   deploy:
     runs-on: ubuntu-latest
+    needs: validate
     if: github.ref == 'refs/heads/master'
 
     steps:
