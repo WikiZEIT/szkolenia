@@ -2145,6 +2145,7 @@ a:not(.btn):hover {
                             <li><img src="./google.png" alt="Google" /></li>
                             <li><img src="./docker.png" alt="Docker" /></li>
                             <li><img src="./duckduckgo.png" alt="DuckDuckGo" /></li>
+                            <li><img src="./sqlite.png" alt="SQLite" /></li>
                             <li><img src="./codalab.png" alt="CodaLab" /></li>
                           </ul>
                           <p class="logos-desc">Mój projekt Open Source <a href="https://terminal.jcubic.pl/">jQuery Terminal</a> był wykorzystywany przez:</p>
@@ -2153,6 +2154,7 @@ a:not(.btn):hover {
                             <li>DockDuckGo użyło go jako <a href="https://web.archive.org/web/20220608043747/https://duckduckgo.com/tty/">intefejs wyszukiwarki w stylu terminalowym</a>.</li>
                             <li>Docker używał go jako <a href="https://web.archive.org/web/20130822144120/https://www.docker.io/gettingstarted/">interaktywny samouczek</a>.</li>
                             <li>Codalab nadal używa go w swoich <a href="https://worksheets.codalab.org/worksheets">worksheets</a>.</li>
+                            <li>SQLite używa biblioteki na <a href="https://sqlite.org/fiddle/index.html">swojej piaskownicy</a>.</li>
                           </ul>
                         </section>
 
