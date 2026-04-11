@@ -6,7 +6,7 @@ define('ALLEGRO_TOKEN_FILE', __DIR__ . '/allegro_tokens.json');
 define('ALLEGRO_CLIENT_ID', '...');
 define('ALLEGRO_CLIENT_SECRET', '...');
 define('ALLEGRO_ENABLED', false);
-define('BASE_URL', 'https://jcubic.pl/wikizeit/szkolenia/');
+define('BASE_URL', 'https://jcubic.pl/wikizeit/oferta/');
 
 $message_sent = false;
 $error_message = '';
