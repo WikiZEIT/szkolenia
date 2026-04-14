@@ -10,6 +10,7 @@
     "caption": "Jakub T. Jankiewicz"
   },
   "jobTitle": "Senior Front-End Developer",
+  "description": "Programista Open Source z 15-letnim stażem, twórca jQuery Terminal, interpretera LIPS Scheme oraz projektu edukacyjnego WikiZEIT. Doświadczony Wikipedysta, trener oraz mentor.",
   "sameAs": [
     "https://twitter.com/jcubic",
     "https://pinterest.com/jcubic/",
@@ -33,6 +34,8 @@
     "https://en.wikipedia.org/wiki/User:Jcubic",
     "https://commons.wikimedia.org/wiki/User:Jcubic",
     "https://www.wikidata.org/wiki/Q113688230",
-    "https://www.youtube.com/@jcubic"
+    "https://www.youtube.com/@jcubic",
+    "https://buzzsumo.com/journalist/jakub-t--jankiewicz-3975897/",
+    "https://pypi.org/user/jcubic/"
   ]
 }
