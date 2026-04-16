@@ -92,7 +92,6 @@ $graph = [
             'url' => BASE_URL,
             'name' => 'Komercyjne szkolenia z Wikipedii i SEO - WikiZEIT',
             'description' => 'Profesjonalne szkolenia z edycji Wikipedii i danych strukturalnych prowadzone przez Jakuba T. Janiewicza.',
-            'mainEntity' => ['@id' => $course_id],
             'author' => ['@id' => $person_id],
             'mainEntity' => [
                 [ '@id' => $course_id ],
@@ -204,7 +203,7 @@ $graph = [
             ],
             'reviewBody' => 'Jakub posiada głęboką wiedzę o mechanizmach działania Wikipedii i potrafi ją przekazać oraz zamienić w rzeczywiste rezultaty.',
             'itemReviewed' => [
-                '@id' => $consultation_id
+                '@id' => $service_id
             ]
         ],
 
@@ -216,7 +215,7 @@ $graph = [
             ],
             'reviewBody' => 'Współpraca z Jakubem była absolutnie świetna. Pomógł mi napisać i poprawić artykuł na Wikipedii - tam, gdzie wiele osób się wahało lub unikało tematu, on od razu zaproponował swoją pomoc. Był konkretny, szybki i niezwykle profesjonalny. Wszystko odbywało się sprawnie, a kontakt z nim był naprawdę przyjemny. Jestem bardzo zadowolona i ogromnie wdzięczna za jego zaangażowanie. Zdecydowanie polecam współpracę z Jakubem!',
             'itemReviewed' => [
-                '@id' => $consultation_id
+                '@id' => $service_id
             ]
         ],
 
