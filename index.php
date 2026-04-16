@@ -196,30 +196,6 @@ $graph = [
         ],
 
         [
-            '@type' => 'Review',
-            'author' => [
-                '@type' => 'Person',
-                'name' => 'Tymon Wysocki'
-            ],
-            'reviewBody' => 'Jakub posiada głęboką wiedzę o mechanizmach działania Wikipedii i potrafi ją przekazać oraz zamienić w rzeczywiste rezultaty.',
-            'itemReviewed' => [
-                '@id' => $service_id
-            ]
-        ],
-
-        [
-            '@type' => 'Review',
-            'author' => [
-                '@type' => 'Person',
-                'name' => 'Iga Jagiełło'
-            ],
-            'reviewBody' => 'Współpraca z Jakubem była absolutnie świetna. Pomógł mi napisać i poprawić artykuł na Wikipedii - tam, gdzie wiele osób się wahało lub unikało tematu, on od razu zaproponował swoją pomoc. Był konkretny, szybki i niezwykle profesjonalny. Wszystko odbywało się sprawnie, a kontakt z nim był naprawdę przyjemny. Jestem bardzo zadowolona i ogromnie wdzięczna za jego zaangażowanie. Zdecydowanie polecam współpracę z Jakubem!',
-            'itemReviewed' => [
-                '@id' => $service_id
-            ]
-        ],
-
-        [
             '@type' => 'FAQPage',
             'mainEntity' => array_map(function($item) {
                 return [
