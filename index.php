@@ -10,9 +10,6 @@ define('BASE_URL', 'https://jcubic.pl/wikizeit/oferta/');
 
 $message_sent = false;
 $error_message = '';
-$a = rand(1, 10);
-$b = rand(1, 10);
-$result = $a + $b;
 
 $faq = [
     [
@@ -211,10 +208,6 @@ $graph = [
     ]
 ];
 
-session_start();
-$prev_result = isset($_SESSION['result']) ? $_SESSION['result'] : null;
-$_SESSION['result'] = $result;
-
 $is_request = $_SERVER['REQUEST_METHOD'] === 'POST';
 
 if ($is_request) {
@@ -244,11 +237,7 @@ if ($is_request) {
 }
 
 function is_spam() {
-  global $result, $prev_result;
-  if (!isset($_POST['email_confirmation'])) {
-     return true;
-  }
-  return intval($_POST['email_confirmation']) != $prev_result;
+  return !empty($_POST['email_confirmation']);
 }
 
 
@@ -1571,6 +1560,15 @@ details[open] .accordion-icon {
     gap: 1.5rem;
 }
 
+.email-confirmation-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .form-row {
     display: grid;
     grid-template-columns: 1fr;
@@ -2288,6 +2286,10 @@ a:not(.btn):hover {
                                 <p class="contact-subtitle">Masz pytanie lub chcesz omówić swój projekt? Wypełnij formularz, a skontaktuję się z Tobą jak najszybciej.</p>
                             </div>
                             <form class="contact-form" method="POST">
+                                <div class="form-group email-confirmation-field" aria-hidden="true">
+                                    <label class="form-label" for="email_confirmation">Potwierdź email</label>
+                                    <input class="form-input" type="text" id="email_confirmation" name="email_confirmation" placeholder="jan@example.com" tabindex="-1" autocomplete="off"/>
+                                </div>
                                 <div class="form-row">
                                     <div class="form-group">
                                         <label class="form-label" for="name">Imię i nazwisko</label>
@@ -2300,15 +2302,11 @@ a:not(.btn):hover {
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="subject">Temat</label>
-                                    <input class="form-input" id="subject" name="subject" required laceholder="Pytanie dotyczące szkolenia" type="text"/>
+                                    <input class="form-input" id="subject" name="subject" required placeholder="Pytanie dotyczące szkolenia" type="text"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="message">Wiadomość</label>
-                                    <textarea class="form-textarea" id="message" name="message" required  placeholder="Twoja wiadomość..." rows="4"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label lass="form-label" for="email_confirmation">Podaj Wynik: <?= $a ?> + <?= $b ?></label>
-                                    <input class="form-input" type="text" id="email_confirmation" name="email_confirmation" required placeholder="="/>
+                                    <textarea class="form-textarea" id="message" name="message" required placeholder="Twoja wiadomość..." rows="4"></textarea>
                                 </div>
                                 <div class="form-submit">
                                     <?php if ($message_sent): ?>
