@@ -1,4 +1,4 @@
-# [Wikipedia SEO & Marketing – Profesjonalne Szkolenia i Konsultacje](https://jcubic.pl/wikizeit/szkolenia/)
+# [Wikipedia SEO & Marketing – Profesjonalne Szkolenia i Konsultacje](https://wikizeit.jcubic.pl/oferta/)
 
 ![Wikipedia+SEO social card](social-card.png)
 

@@ -6,7 +6,7 @@ define('ALLEGRO_TOKEN_FILE', __DIR__ . '/allegro_tokens.json');
 define('ALLEGRO_CLIENT_ID', '...');
 define('ALLEGRO_CLIENT_SECRET', '...');
 define('ALLEGRO_ENABLED', false);
-define('BASE_URL', 'https://jcubic.pl/wikizeit/oferta/');
+define('BASE_URL', 'https://wikizeit.jcubic.pl/oferta/');
 
 $message_sent = false;
 $error_message = '';
@@ -75,7 +75,7 @@ $offer_catalog = [
 $person['hasOfferCatalog'] = $offer_catalog;
 
 $page_id = BASE_URL . "#webpage";
-$wikizeit_id = 'https://jcubic.pl/wikizeit/';
+$wikizeit_id = 'https://wikizeit.jcubic.pl/';
 $service_id = $wikizeit_id . '#service';
 $breadcrumb_id = BASE_URL . '#breadcrumb';
 
@@ -174,18 +174,12 @@ $graph = [
                 [
                     '@type' => 'ListItem',
                     'position' => 1,
-                    'item' => 'https://jcubic.pl',
-                    'name' => 'Głównie JavaScript'
-                ],
-                [
-                    '@type' => 'ListItem',
-                    'position' => 2,
                     'item' => $wikizeit_id . '#webpage',
                     'name' => 'WikiZeit'
                 ],
                 [
                     '@type' => 'ListItem',
-                    'position' => 3,
+                    'position' => 2,
                     'item' => $page_id,
                     'name' => 'Szkolenia i Konsultacje'
                 ]
@@ -2327,8 +2321,7 @@ a:not(.btn):hover {
                           <p class="footer-copyright">© 2025 <a href="https://jakub.jankiewicz.org">Jakub T. Jankiewicz</a>.</p>
                           <div class="footer-links">
                               <ul>
-                                  <li><a class="footer-link" href="/">Głównie JavaScript</a></li>
-                                  <li><a class="footer-link" href="/wikizeit">WikiZEIT</a></li>
+                                  <li><a class="footer-link" href="/">WikiZEIT</a></li>
                                   <li><a class="footer-link" href="https://github.com/WikiZEIT/szkolenia">kod źródłowy</a></li>
                               </ul>
                           </div>

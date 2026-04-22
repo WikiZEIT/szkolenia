@@ -15,7 +15,7 @@ Landing page for Wikipedia SEO/Consulting/Training services. The entire site liv
 - All changes go into `index.php` only — never split into separate files
 - JavaScript must be **inline at the bottom** of the file, before `</body>`
 - `localStorage` keys must use the **`wikipedia:` prefix** (e.g. `wikipedia:colorScheme`) to avoid conflicts with other apps on the same server
-- The site is served at the `/wikipedia/` path on the server
+- The site is served at `https://wikizeit.jcubic.pl/oferta/`
 - The PHP/Allegro code at the top of the file is **unused** — do not remove it
 
 ## Architecture Notes
