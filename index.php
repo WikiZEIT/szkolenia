@@ -8,6 +8,11 @@ define('ALLEGRO_CLIENT_SECRET', '...');
 define('ALLEGRO_ENABLED', false);
 define('BASE_URL', 'https://wikizeit.jcubic.pl/oferta/');
 
+$want_markdown = (
+    str_contains($_SERVER['HTTP_ACCEPT'] ?? '', 'text/markdown') ||
+    ($_GET['format'] ?? '') === 'md'
+);
+
 $message_sent = false;
 $error_message = '';
 
@@ -470,6 +475,7 @@ if (isset($_GET['auth']) && ALLEGRO_ENABLED) {
         die("<h2 style='color:red;'>Kod wygasł. Uruchom autoryzację ponownie.</h2>");
     }
 } else {
+if ($want_markdown) ob_start();
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -2458,4 +2464,22 @@ a:not(.btn):hover {
     <script defer src="https://umami.jcubic.pl/script.js" data-website-id="c716ef1c-b60b-455c-8279-58996a09a8a6"></script>
 </body>
 </html>
-<?php } ?>
+<?php
+if ($want_markdown) {
+    $html = ob_get_clean();
+    preg_match('/<main[^>]*>(.*?)<\/main>/s', $html, $m);
+    $main_html = $m[1] ?? '';
+    $main_html = preg_replace('/<script[\s\S]*?<\/script>/i', '', $main_html);
+    $main_html = preg_replace('/<form[\s\S]*?<\/form>/i', '', $main_html);
+    $main_html = preg_replace('/<style[\s\S]*?<\/style>/i', '', $main_html);
+
+    require_once __DIR__ . '/vendor/autoload.php';
+    $converter = new \League\HTMLToMarkdown\HtmlConverter([
+        'strip_tags' => true,
+        'hard_break' => true,
+    ]);
+    $markdown = $converter->convert($main_html);
+
+    header('Content-Type: text/markdown; charset=utf-8');
+    echo $markdown;
+} } ?>
