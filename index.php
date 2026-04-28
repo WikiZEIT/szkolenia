@@ -2324,7 +2324,7 @@ a:not(.btn):hover {
 
                     <footer class="footer">
                         <div class="footer-content">
-                          <p class="footer-copyright">© 2025 <a href="https://jakub.jankiewicz.org">Jakub T. Jankiewicz</a>.</p>
+                          <p class="footer-copyright">© 2025-<?= date('Y') ?> <a href="https://jakub.jankiewicz.org">Jakub T. Jankiewicz</a>.</p>
                           <div class="footer-links">
                               <ul>
                                   <li><a class="footer-link" href="/">WikiZEIT</a></li>
