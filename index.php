@@ -1898,7 +1898,7 @@ a:not(.btn):hover {
                                 </li>
                                 <li class="audience-item">
                                     <h3 class="audience-title">Działy PR i Komunikacji (In-house)</h3>
-                                    <p class="audience-desc">Twoja firma potrzebuje profesjonalnej obecności w encyklopedii, ale boisz się oskarżeń o kryptoreklamę? Dowiesz się, jak transparentnie zarządzać Konfliktem Interesów (COI) i jak rozmawiać z administratorami, używając ich własnego języka i argumentów.</p>
+                                    <p class="audience-desc">Twoja firma potrzebuje profesjonalnej obecności w encyklopedii, ale boisz się oskarżeń o kryptoreklamę? Dowiesz się, jak transparentnie zarządzać Konfliktem Interesów (<a href="https://pl.wikipedia.org/wiki/WP:KI">WP:KI</a>) i jak rozmawiać z administratorami, używając ich własnego języka i argumentów.</p>
                                 </li>
                                 <li class="audience-item">
                                     <h3 class="audience-title">Specjaliści Personal Brandingu</h3>
