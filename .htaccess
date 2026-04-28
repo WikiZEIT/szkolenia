@@ -1,7 +1,0 @@
-RewriteEngine on
-RewriteRule allegro_tokens.json - [L,R=404]
-RewriteRule ^.git* - [L,R=404]
-
-# Content negotiation: serve markdown when Accept: text/markdown
-RewriteCond %{HTTP:Accept} text/markdown
-RewriteRule ^(index\.php)?$ /oferta/index.php?format=md [L,QSA]
