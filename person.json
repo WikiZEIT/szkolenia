@@ -3,6 +3,7 @@
   "url": "https://jakub.jankiewicz.org/pl/",
   "@id": "https://jakub.jankiewicz.org",
   "name": "Jakub T. Jankiewicz",
+  "alternateName": "jcubic",
   "image": {
     "@type": "ImageObject",
     "@id": "https://jakub.jankiewicz.org#image",
@@ -39,6 +40,7 @@
     "https://www.youtube.com/@jcubic",
     "https://www.npmjs.com/~jcubic",
     "https://pypi.org/user/jcubic/",
+    "https://launchpad.net/~jcubic",
     "https://buzzsumo.com/journalist/jakub-t--jankiewicz-3975897/"
   ]
 }
