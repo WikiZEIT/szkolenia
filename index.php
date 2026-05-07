@@ -157,7 +157,7 @@ $graph = [
             'name' => 'Szkolenie Wikipedia+SEO i nie tylko',
             'description' => 'Kompleksowe szkolenie z edycji Wikipedii i danych strukturalnych. Pakiet obejmuje:\n' .
                            '- Imienny certyfikat ukończenia szkolenia\n' .
-                           '- Stały dostęp do konsultacji w cenie 190 zł netto/h\n' .
+                           '- Stały dostęp do konsultacji z 20% zniżką\n' .
                            '- Opiekę oficjalnego Wiki-Przewodnika wewnątrz Wikipedii\n' .
                            '- Konfigurację strony z odnośnikami do narzędzi.',
             'author' => [ '@id' => $person_id ],
@@ -1992,7 +1992,7 @@ a:not(.btn):hover {
                                     <span class="material-symbols-outlined bonus-icon">support_agent</span>
                                     <div class="bonus-content">
                                         <h3 class="bonus-title">Stały dostęp do konsultacji w preferencyjnej cenie</h3>
-                                        <p class="bonus-desc">Absolwenci szkoleń otrzymują stały dostęp do konsultacji w cenie <strong>190 zł netto / godz</strong>.</p>
+                                        <p class="bonus-desc">Absolwenci szkoleń otrzymują stały dostęp do konsultacji <strong>z 20% zniżką</strong>.</p>
                                     </div>
                                 </div>
                                 <div class="bonus-item">
