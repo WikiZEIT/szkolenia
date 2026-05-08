@@ -1676,6 +1676,13 @@ details[open] .accordion-icon {
     border-color: #991b1b;
 }
 
+.privacy-notice {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--color-gray-500);
+    text-align: center;
+}
+
 /* Footer */
 .footer {
     width: 100%;
@@ -2311,6 +2318,7 @@ a:not(.btn):hover {
                                     <label class="form-label" for="message">Wiadomość</label>
                                     <textarea class="form-textarea" id="message" name="message" required placeholder="Twoja wiadomość..." rows="4"></textarea>
                                 </div>
+                                <p class="privacy-notice">Wysyłając wiadomość, akceptujesz naszą <a href="/privacy/">politykę prywatności</a>.</p>
                                 <div class="form-submit">
                                     <?php if ($message_sent): ?>
                                         <p class="form-message form-message-success">✅ Wiadomość została wysłana. Odezwę się wkrótce!</p>
@@ -2331,6 +2339,7 @@ a:not(.btn):hover {
                           <div class="footer-links">
                               <ul>
                                   <li><a class="footer-link" href="/">WikiZEIT</a></li>
+                                  <li><a class="footer-link" href="/privacy/">Prywatność</a></li>
                                   <li><a class="footer-link" href="https://github.com/WikiZEIT/szkolenia">kod źródłowy</a></li>
                               </ul>
                           </div>
