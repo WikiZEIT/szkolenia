@@ -1854,8 +1854,11 @@ a:not(.btn):hover {
                                         Pomagam firmom zrozumieć standardy Wikipedii, aby ich obecność tam była trwała i zgodna z zasadami społeczności. Masz problem z edycją? Twoja strona została skasowana? Chcesz wiedzieć dlaczego, trafiłeś w dobre miejsce.
                                     </h2>
                                 </div>
-                                <a href="#kontakt" class="btn btn-primary btn-hero" data-subject="Konsultacje z Wikipedii" data-body="Jestem zainteresowany darmowym adytem z Wikipedii.">
-                                    <span>Umów wstępny, darmowy audyt</span>
+                                <a class="btn btn-primary btn-hero"
+                                   data-cal-link="jcubic/darmowa-konsultacja"
+                                   data-cal-namespace="darmowa-konsultacja"
+                                   data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                                    <span>Zarezerwuj wstępną, darmową rozmowę</span>
                                 </a>
                             </div>
                         </div>
@@ -2461,7 +2464,24 @@ a:not(.btn):hover {
             }
         })();
     </script>
+    <!-- Cal.com element-click embed -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.eu/embed/embed.js", "init");
+      Cal("init", "darmowa-konsultacja", {origin:"https://app.cal.eu"});
+      Cal.ns["darmowa-konsultacja"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
     <script defer src="https://umami.jcubic.pl/script.js" data-website-id="c716ef1c-b60b-455c-8279-58996a09a8a6"></script>
+    <script>
+      function track(event, data) {
+        var umami = globalThis.umami;
+        if (umami) {
+          umami.track(event, data);
+        }
+      }
+      document.querySelector('[data-cal-link]').addEventListener('click', function() {
+        track('CTA', { action: 'darmowa-rozmowa' });
+      });
+    </script>
 </body>
 </html>
 <?php
