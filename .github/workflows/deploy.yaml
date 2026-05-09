@@ -27,7 +27,8 @@ jobs:
           php-version: '8.0'
 
       - name: Check PHP syntax
-        run: php -l index.php
+        run: |
+          find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
 
   deploy:
     runs-on: ubuntu-latest
