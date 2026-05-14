@@ -1,4 +1,7 @@
 <?php
+require_once __DIR__ . '/../../api/lib/common.php';
+require_once __DIR__ . '/../../api/lib/stats.php';
+
 $message_sent = false;
 $error_message = '';
 
@@ -7,6 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
     $user_message = htmlspecialchars($_POST['message'] ?? '', ENT_QUOTES, 'UTF-8');
     if (is_spam()) {
+        logBotAttempt('oferta', [
+            'honeypot' => $_POST['email_confirmation'] ?? '',
+            'email' => $email,
+        ]);
         $error_message = "Wygląda na to że nie jesteś człowiem!";
     } else if (filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($user_message)) {
         $to = 'jcubic@jcubic.pl';
@@ -21,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
         if (mail($to, $subject, $body, $headers)) {
+            recordSubmission('oferta', $email);
             $message_sent = true;
         } else {
             $error_message = 'Przepraszam, ale wystąpił błąd wysłania wiadomosci. Spróbuj jeszcze raz.';
