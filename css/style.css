@@ -1106,7 +1106,8 @@ details[open] .accordion-icon {
 }
 
 .form-submit {
-    text-align: center;
+    isplay: flex;
+    justify-content: end;
 }
 
 .btn-submit {
