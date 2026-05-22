@@ -19,12 +19,22 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label class="form-label" for="website">Strona / marka (opcjonalnie)</label>
+                                    <input class="form-input" id="website" name="website" placeholder="https://example.com lub nazwa firmy" type="text"/>
+                                </div>
+                                <div class="form-group">
                                     <label class="form-label" for="subject">Temat</label>
                                     <input class="form-input" id="subject" name="subject" required placeholder="Pytanie dotyczące szkolenia" type="text"/>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="message">Wiadomość</label>
                                     <textarea class="form-textarea" id="message" name="message" required placeholder="Twoja wiadomość..." rows="4"></textarea>
+                                </div>
+                                <div class="form-group form-checkbox-group">
+                                    <label class="form-checkbox-label">
+                                        <input type="checkbox" name="send_copy" value="1" checked/>
+                                        <span>Wyślij mi kopię wiadomości</span>
+                                    </label>
                                 </div>
                                 <p class="privacy-notice">Wysyłając wiadomość, akceptujesz naszą <a href="/privacy/">politykę prywatności</a>.</p>
                                 <div class="form-submit">

@@ -1105,8 +1105,25 @@ details[open] .accordion-icon {
     resize: vertical;
 }
 
+.form-checkbox-group {
+    flex-direction: row;
+}
+
+.form-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+    cursor: pointer;
+}
+
+.dark .form-checkbox-label {
+    color: var(--color-gray-300);
+}
+
 .form-submit {
-    isplay: flex;
+    display: flex;
     justify-content: end;
 }
 
