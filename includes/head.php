@@ -36,6 +36,8 @@ if ($want_markdown) ob_start();
     <meta property="og:title" content="<?= htmlspecialchars($page_title) ?>" />
     <meta property="og:description" content="<?= htmlspecialchars($page_description) ?>" />
     <meta property="og:image" content="<?= $page_image ?>" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:site_name" content="WikiZEIT" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="<?= $page_url ?>" />
     <meta name="twitter:title" content="<?= htmlspecialchars($page_title) ?>" />
