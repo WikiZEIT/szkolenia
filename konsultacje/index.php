@@ -35,7 +35,7 @@ $graph = [
         [
             '@type' => 'Offer',
             '@id' => $consultation_id,
-            'price' => '250.00',
+            'price' => PRICE . '.00',
             'priceCurrency' => 'PLN',
             'itemOffered' => ['@id' => $service_id]
         ],
@@ -171,7 +171,7 @@ require __DIR__ . '/../includes/header.php';
                                     <p class="pricing-description">Indywidualne sesje strategiczne, aby rozwiązać Twoje konkretne wyzwania związane z Wikipedią.</p>
                                     <div class="pricing-amount">
                                         <p class="pricing-name">Konsultacje</p>
-                                        <p class="pricing-price">250zł netto / godz.</p>
+                                        <p class="pricing-price"><?= PRICE ?>zł netto / godz.</p>
                                     </div>
                                     <ul class="pricing-features">
                                         <li class="pricing-feature">

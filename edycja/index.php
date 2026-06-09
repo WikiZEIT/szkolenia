@@ -175,7 +175,7 @@ require __DIR__ . '/../includes/header.php';
                                     <p class="pricing-description">Profesjonalne opracowanie i techniczne wdrożenie treści do Wikipedii zgodnie z wymogami społeczności.</p>
                                     <div class="pricing-amount">
                                         <p class="pricing-name">Edycja</p>
-                                        <p class="pricing-price">250zł netto / godz.</p>
+                                        <p class="pricing-price"><?= PRICE ?>zł netto / godz.</p>
                                     </div>
                                     <ul class="pricing-features">
                                         <li class="pricing-feature">
