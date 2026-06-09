@@ -47,3 +47,4 @@ jobs:
             set -e
             cd ${{ secrets.SSH_PATH }}
             git pull
+            composer install --no-dev --optimize-autoloader

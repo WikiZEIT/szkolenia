@@ -1,0 +1,7 @@
+{
+    "require": {
+        "erusev/parsedown": "^1.8",
+        "caco/un-markdown": "^0.0.1",
+        "league/html-to-markdown": "^5.1"
+    }
+}
