@@ -16,13 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
         $error_message = "Wygląda na to że nie jesteś człowiem!";
     } else if (filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($user_message)) {
-        $to = 'jcubic@jcubic.pl';
+        $to = 'jakub@wikizeit.edu.pl';
         $subject = $_POST['subject'];
         $website = trim($_POST['website'] ?? '');
         $sendCopy = !empty($_POST['send_copy']);
         $from = !empty($name) ? $name . ' <' . $email . '>' : $email;
 
-        $messageId = '<form-' . time() . '-' . bin2hex(random_bytes(8)) . '@jcubic.pl>';
+        $messageId = '<form-' . time() . '-' . bin2hex(random_bytes(8)) . '@wikizeit.edu.pl>';
 
         $body = "Wiadomość ze strony " . $page_url . ":\n\n";
         $body .= "From: " . $from . "\n";
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         $body .= "Message:\n" . $user_message;
 
-        $headers = "From: WikiZEIT <jcubic@jcubic.pl>\r\n";
+        $headers = "From: WikiZEIT <jcubic@wikizeit.edu.pl>\r\n";
         $headers .= "Reply-To: " . $from . "\r\n";
         $headers .= "Message-ID: " . $messageId . "\r\n";
         $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
                 $copyBody .= "Message:\n" . $user_message;
 
-                $copyHeaders = "From: WikiZEIT <jcubic@jcubic.pl>\r\n";
+                $copyHeaders = "From: WikiZEIT <jcubic@wikizeit.edu.pl>\r\n";
                 $copyHeaders .= "References: " . $messageId . "\r\n";
                 $copyHeaders .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
