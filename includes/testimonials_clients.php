@@ -21,5 +21,17 @@
                                         <p class="testimonial-position">właścicielka salonu medycyny estetycznej</p>
                                     </footer>
                                 </div>
+                                <div class="testimonial-card">
+                                    <span class="material-symbols-outlined testimonial-quote">format_quote</span>
+                                    <blockquote class="testimonial-text">
+                                        "Korzystaliśmy z usług Pana Jakuba Jankiewicza i jesteśmy niezwykle zadowoleni ze współpracy. Pan Jakub wykazał się pełnym profesjonalizmem na każdym etapie – od fazy doradczej aż po finalizację zlecenia. Jest osobą niezwykle skuteczną, terminową i dysponującą dużą wiedzą oraz doświadczeniem w swojej dziedzinie.<br/><br/>
+Z pełnym przekonaniem polecamy Pana Jakuba Jankiewicza wszystkim potencjalnym klientom."
+                                    </blockquote>
+                                    <footer class="testimonial-footer">
+                                        <p class="testimonial-name">Karol Hoang</p>
+                                        <p class="testimonial-position">Prezes Fundacji Wspierania Integracji Wietnamczyków w Polsce</p>
+                                    </footer>
+                                </div>
                             </div>
+
                         </section>
