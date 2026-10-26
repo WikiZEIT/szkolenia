@@ -32,6 +32,15 @@ Z pełnym przekonaniem polecamy Pana Jakuba Jankiewicza wszystkim potencjalnym k
                                         <p class="testimonial-position">Prezes Fundacji Wspierania Integracji Wietnamczyków w Polsce</p>
                                     </footer>
                                 </div>
+                                <div class="testimonial-card">
+                                    <span class="material-symbols-outlined testimonial-quote">format_quote</span>
+                                    <blockquote class="testimonial-text">
+                                        "Jesteśmy bardzo zadowoleni ze współpracy z Panem Jakubem. Doświadczenie, wiedza oraz samodzielność Pana Jakuba pozwoliły nam zrealizować zamierzony cel nie angażując nas w działania ponad to co niezbędne. Jakość i profesjonalizm zasługują na uznanie i wdzięczność za pomoc. Cieszy nas, że w obecnych czasach nadal da się znaleźć fachowców na medal 😊"
+                                    </blockquote>
+                                    <footer class="testimonial-footer">
+                                        <p class="testimonial-name">Aleksandra Misiak</p>
+                                        <p class="testimonial-position">specjalista ds marketingu PERUN S.A.</p>
+                                    </footer>
+                                </div>
                             </div>
-
                         </section>
