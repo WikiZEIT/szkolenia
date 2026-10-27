@@ -12,13 +12,8 @@ $all_faq = [
     ],
     'edit_duration' => [
         'question' => 'Ile trwa edycja artykułu na Wikipedii?',
-        'answer'   => '<p>Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godziny. Krócej, gdy mam już przygotowany tekst i źródła. Wyszkuwanie i czytanie źródeł, może wydłużyć cały proces.</p>',
+        'answer'   => '<p>Edycja niewielkiego artykułu (100-150 wyrazów) w języku polskim trwa zazwyczaj 1-2 godziny. Krócej, gdy mam już przygotowany tekst i źródła. Wyszkuwanie i czytanie źródeł, może wydłużyć cały proces. W przypadku dłuższych stron z poprawkami, czas może się wydłużyć do 4 godzn pracy.</p>',
         'pages'    => ['edycja', 'konsultacje'],
-    ],
-    'max_cost' => [
-        'question' => 'Jaki jest maksymalny koszt przygotowania jednego artykułu?',
-        'answer'   => '<p>W przypadku <strong>standardowych zleceń</strong> (edycja artykułu do ok. 200 słów), stosuję <strong>górny limit 1000 zł netto</strong> za pojedynczą stronę. W trudnych przypadkach dostaniesz indywidualną wycenę.</p>',
-        'pages'    => ['edycja'],
     ],
     'only_polish' => [
         'question' => 'Czy edytujesz tylko w języku Polskim?',
