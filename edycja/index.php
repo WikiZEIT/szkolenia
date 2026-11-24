@@ -120,7 +120,7 @@ require __DIR__ . '/../includes/header.php';
                                         <h3 class="accordion-title">Redakcja artykułu w języku Wikipedii</h3>
                                         <span class="material-symbols-outlined accordion-icon">expand_more</span>
                                     </summary>
-                                    <p class="accordion-content">Przygotowanie treści zgodnej z zasadami neutralnego punktu widzenia (<a href="https://pl.wikipedia.org/wiki/WP:NPOV">WP:NPOV</a>), wikitext i standardami formatowania. Artykuł jest gotowy do publikacji i odporny na cofnięcie przez społeczność.</p>
+                                    <p class="accordion-content">Przygotowanie treści zgodnej z zasadami neutralnego punktu widzenia (<a href="https://pl.wikipedia.org/wiki/WP:NPOV">WP:NPOV</a>), wikitext i standardami formatowania. Artykuł jest gotowy do publikacji.</p>
                                 </details>
                                 <details class="accordion-item">
                                     <summary class="accordion-summary">
